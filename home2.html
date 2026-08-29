@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AquaVista Ocean Collection — Explore our full range of rare marine fish, planted tank species, aquatic plants and premium reef systems.">
+  <title>Ocean Collection — AquaVista Premium Aquatics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- PAGE TRANSITION -->
+  <div id="page-transition" aria-hidden="true"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <div class="search-header">
+        <span style="color:var(--aquamarine);font-size:1.1rem;"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input class="search-input" type="search" placeholder="Search fish, plants, equipment…" autocomplete="off">
+        <button class="search-close" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">
+        <span>Press <kbd>Ctrl+K</kbd> to search anytime</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="AquaVista Home">
+        <div class="nav-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+        <div class="nav-logo-text">
+          <span class="nav-brand">AquaVista</span>
+          <span class="nav-tagline">Premium Aquatics</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="nav-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button class="nav-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <span class="rtl-icon">RTL</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
+      </div>
+
+      <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+    
+    <a href="home2.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> home2</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a><a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
+    <a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a>
+    <div class="mobile-menu-controls">
+      <button class="btn btn-outline btn-sm" id="theme-toggle-mob"><i class="fa-solid fa-moon"></i> Dark Mode</button>
+      <button class="btn btn-ghost btn-sm" id="rtl-toggle-mob">RTL</button>
+    </div>
+  </div>
+
+  <!-- ========== SECTION 1: CINEMATIC HERO ========== -->
+  <section class="hero" aria-label="Ocean Collection Hero">
+    <div class="hero-ocean-video">
+      <img src="https://images.unsplash.com/photo-1707580640921-42d78bfa19cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEwfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Majestic planted aquarium with tropical fish" loading="eager">
+    </div>
+    <div class="bubbles-container" data-bubbles="16" aria-hidden="true"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="hero-content hero-enter">
+        <span class="hero-eyebrow">Ocean Collection · 2026 Edition</span>
+        <h1 class="hero-title">The World's Most<br><span>Extraordinary</span><br>Marine Species</h1>
+        <p class="hero-description">Hand-selected from sustainable ocean partners across 14 countries. Every specimen is quarantined, health-certified, and arrives ready to thrive.</p>
+        <div class="hero-actions">
+          <a href="#marine-fish" class="btn btn-primary btn-lg ripple">Browse Marine Fish</a>
+          <a href="services.html" class="btn btn-ghost btn-lg">Special Orders</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="value" data-count="450" data-suffix="+">450+</span>
+            <span class="label">Live Species</span>
+          </div>
+          <div class="hero-stat">
+            <span class="value" data-count="14" data-suffix=" Countries">14</span>
+            <span class="label">Source Countries</span>
+          </div>
+          <div class="hero-stat">
+            <span class="value" data-count="16" data-suffix=" Yrs">16</span>
+            <span class="label">Years of Care</span>
+          </div>
+          <div class="hero-stat">
+            <span class="value" data-count="99" data-suffix="%" data-decimal="false">99%</span>
+            <span class="label">Survival Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-mouse-inner"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: FEATURED MARINE FISH GRID ========== -->
+  <section class="section" id="marine-fish" aria-labelledby="marine-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">Marine Collection</span>
+        <h2 class="section-title" id="marine-heading">Rare <span class="gradient-text">Marine Fish</span></h2>
+        <p class="section-subtitle">Sourced from the Indo-Pacific, Caribbean, and Red Sea — the crown jewels of saltwater fishkeeping.</p>
+      </div>
+      <div class="marine-grid reveal reveal-up reveal-delay-2">
+        <div class="marine-card shine">
+          <img src="https://plus.unsplash.com/premium_photo-1693723595968-b7d410643cbf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE3fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Blue Tang swimming in reef" loading="lazy" data-zoom>
+          <div class="marine-card-info">
+            <div><span class="badge badge-aqua">Pacific</span></div>
+            <h3>Blue Tang</h3>
+            <p>Paracanthurus hepatus · Hardy &amp; active reef fish</p>
+            <div class="flex-between">
+              <span style="font-family:var(--font-serif);font-size:var(--fs-xl);color:var(--aquamarine);">$89.00</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="marine-card shine">
+          <img src="https://images.unsplash.com/photo-1667680139900-44882fc7b625?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Emperor Angelfish in reef" loading="lazy" data-zoom>
+          <div class="marine-card-info">
+            <div><span class="badge badge-rare">Rare</span></div>
+            <h3>Emperor Angelfish</h3>
+            <p>Pomacanthus imperator · Majestic Indo-Pacific specimen</p>
+            <div class="flex-between">
+              <span style="font-family:var(--font-serif);font-size:var(--fs-xl);color:var(--aquamarine);">$320.00</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+        <div class="marine-card shine">
+          <img src="https://images.unsplash.com/photo-1695231054363-f149bb54841e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Clownfish with anemone" loading="lazy" data-zoom>
+          <div class="marine-card-info">
+            <div><span class="badge badge-aqua">Popular</span></div>
+            <h3>Ocellaris Clownfish</h3>
+            <p>Amphiprion ocellaris · Perfect reef companion</p>
+            <div class="flex-between">
+              <span style="font-family:var(--font-serif);font-size:var(--fs-xl);color:var(--aquamarine);">$45.00</span>
+              <a href="contact.html" class="btn btn-primary btn-sm">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 reveal reveal-up reveal-delay-3">
+        <a href="contact.html" class="btn btn-outline btn-lg">Request Special Marine Order →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: PLANTED TANK SHOWCASE ========== -->
+  <section class="section bg-aqua-tint" id="planted-heading" aria-labelledby="planted-title">
+    <div class="container">
+      <div class="planted-split reveal reveal-up">
+        <div class="planted-split-img">
+          <img src="https://images.unsplash.com/photo-1703664469228-9d6855b79bc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY3fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" loading="lazy">
+        </div>
+        <div class="planted-split-content">
+          <span class="section-tag" style="align-self:flex-start;">Planted Tanks</span>
+          <h2 class="section-title" id="planted-title" style="color:var(--pearl);margin-top:var(--sp-2);">Living Art —<br><span class="gradient-text-ocean">Nature Aquascaping</span></h2>
+          <p style="color:rgba(242,247,245,0.75);line-height:1.8;margin-bottom:var(--sp-6);">Inspired by the legendary Dutch and Nature styles, our planted tank fish are specifically chosen for lush, densely planted environments. Peaceful, vibrant, and ecologically balanced.</p>
+          <div class="feature-item mb-4">
+            <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="feature-text"><h4 style="color:var(--pearl);">Biotope-Compatible Species</h4><p style="color:rgba(242,247,245,0.65);">Fish selected to thrive alongside live plants without uprooting or damaging delicate leaves.</p></div>
+          </div>
+          <div class="feature-item mb-4">
+            <div class="feature-icon"><i class="fa-solid fa-shrimp"></i></div>
+            <div class="feature-text"><h4 style="color:var(--pearl);">Shrimp &amp; Plant Synergy</h4><p style="color:rgba(242,247,245,0.65);">Algae-eating shrimp, otocinclus, and nano fish for a clean, self-sustaining planted ecosystem.</p></div>
+          </div>
+          <div class="feature-item mb-6">
+            <div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="feature-text"><h4 style="color:var(--pearl);">Expert CO₂ &amp; Lighting</h4><p style="color:rgba(242,247,245,0.65);">Full system bundles with high-PAR LED fixtures, regulators, diffusers, and nutrient-rich substrate.</p></div>
+          </div>
+          <div><a href="services.html" class="btn btn-primary btn-lg">Plan My Planted Tank</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: AQUATIC PLANTS GALLERY ========== -->
+  <section class="section" id="plants-heading" aria-labelledby="plants-title">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">Aquatic Flora</span>
+        <h2 class="section-title" id="plants-title">Aquatic <span class="gradient-text">Plants</span> Gallery</h2>
+        <p class="section-subtitle">From foreground carpeting plants to dramatic background showpieces — 120+ aquatic plant varieties for every setup.</p>
+      </div>
+      <div class="plant-gallery reveal reveal-up reveal-delay-2">
+        <div class="plant-item">
+          <img src="https://images.unsplash.com/photo-1501561869-f59c248fab54?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Java fern in aquarium" loading="lazy">
+          <div class="plant-item-label">Java Fern · $18.00</div>
+        </div>
+        <div class="plant-item">
+          <img src="https://plus.unsplash.com/premium_photo-1661964031223-c071fc3dfc31?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQxfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Amazon sword plant" loading="lazy">
+          <div class="plant-item-label">Amazon Sword · $24.00</div>
+        </div>
+        <div class="plant-item">
+          <img src="https://plus.unsplash.com/premium_photo-1684993466316-81ae0b6c96ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM3fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Moss balls anubias" loading="lazy">
+          <div class="plant-item-label">Anubias Barteri · $15.00</div>
+        </div>
+        <div class="plant-item">
+          <img src="https://images.unsplash.com/photo-1625637996911-e042311e39db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQzfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Vallisneria spiralis aquarium plant" loading="lazy">
+          <div class="plant-item-label">Vallisneria · $12.00</div>
+        </div>
+      </div>
+      <div class="text-center mt-8 reveal reveal-up reveal-delay-3">
+        <a href="contact.html" class="btn btn-outline btn-lg">View All 120+ Plants →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: EXPERT CARE GUIDES ========== -->
+  <section class="section bg-aqua-tint" aria-labelledby="guides-heading">
+    <div class="container">
+      <div class="guide-editorial">
+        <div class="reveal reveal-left">
+          <span class="section-tag">Knowledge Hub</span>
+          <h2 class="section-title" id="guides-heading" style="margin-top:var(--sp-2);">Expert<br><span class="gradient-text">Care Guides</span></h2>
+          <div class="divider left"></div>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:var(--sp-6);">Our marine biologists and veteran aquarists have authored in-depth guides covering water chemistry, planted setups, and breeding rare species.</p>
+          <a href="blog.html" class="btn btn-primary">Browse All Guides</a>
+        </div>
+        <div class="guide-list-editorial reveal reveal-right reveal-delay-2">
+          <a class="guide-link-item" href="blog-details.html?id=water-chemistry">
+            <img class="guide-link-icon" src="https://images.unsplash.com/photo-1667679815544-b35d58ab5545?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ2fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Aquarium cycling guide" loading="lazy">
+            <div class="guide-link-text"><h4>How to Cycle a New Aquarium</h4><p>Complete nitrogen cycle guide for beginners · 12 min read</p></div>
+          </a>
+          <a class="guide-link-item" href="blog-details.html?id=reef-tank-2026">
+            <img class="guide-link-icon" src="https://plus.unsplash.com/premium_photo-1661827154548-827bb8bc5de8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ1fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Reef tank guide" loading="lazy">
+            <div class="guide-link-text"><h4>Setting Up Your First Reef Tank</h4><p>Saltwater parameters, live rock, and coral care · 18 min read</p></div>
+          </a>
+          <a class="guide-link-item" href="blog-details.html?id=co2-planted-tanks">
+            <img class="guide-link-icon" src="https://plus.unsplash.com/premium_photo-1765174942796-0d4a7e0fc4ba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUzfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Planted tank CO2 guide" loading="lazy">
+            <div class="guide-link-text"><h4>CO₂ Injection for Planted Tanks</h4><p>Regulators, diffusers, and drop checkers · 15 min read</p></div>
+          </a>
+          <a class="guide-link-item" href="blog-details.html?id=white-spot-ich">
+            <img class="guide-link-icon" src="https://images.unsplash.com/photo-1617994520675-765ddcc8f257?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU2fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Fish disease treatment" loading="lazy">
+            <div class="guide-link-text"><h4>Diagnosing &amp; Treating Common Fish Diseases</h4><p>Ich, velvet, fin rot and prevention protocols · 20 min read</p></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: STATS + NEWSLETTER ========== -->
+  <section class="section bg-deep" aria-label="Statistics and Newsletter">
+    <div class="container">
+      <div class="grid-4 reveal reveal-up" style="margin-bottom:var(--sp-16);">
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-fish-fins"></i></span>
+          <span class="stat-value" data-count="12500" data-suffix="+">0</span>
+          <span class="stat-label">Fish Rehomed Monthly</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-earth-americas"></i></span>
+          <span class="stat-value" data-count="45" data-suffix=" Countries">0</span>
+          <span class="stat-label">Shipped Worldwide</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-star"></i></span>
+          <span class="stat-value" data-count="4" data-suffix=".9<i class='fa-solid fa-star stat-star'></i>">0</span>
+          <span class="stat-label">Customer Satisfaction</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon"><i class="fa-solid fa-trophy"></i></span>
+          <span class="stat-value" data-count="16" data-suffix=" Awards">0</span>
+          <span class="stat-label">Industry Awards</span>
+        </div>
+      </div>
+
+      <div class="bubbles-container" data-bubbles="8" aria-hidden="true"></div>
+      <div class="newsletter-big reveal reveal-up reveal-delay-2">
+        <span class="section-tag" style="background:rgba(255,255,255,0.2);color:white;border-color:rgba(255,255,255,0.3);">Stay Updated</span>
+        <h2 style="font-family:var(--font-serif);font-size:var(--fs-3xl);color:white;margin-top:var(--sp-2);">New Arrivals Every Week.<br>Be First to Know.</h2>
+        <p style="color:rgba(255,255,255,0.85);margin-top:var(--sp-2);font-size:var(--fs-md);">Join 24,000+ passionate aquarists. No spam, ever.</p>
+        <form class="newsletter-big-form newsletter-form" aria-label="Newsletter signup">
+          <input type="email" placeholder="Enter your email address" aria-label="Email for newsletter" required>
+          <button type="submit">Subscribe Free <i class="fa-solid fa-arrow-right btn-arrow" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+          <div>
+            <span class="footer-brand-name">AquaVista</span>
+            <span class="footer-tagline">Premium Aquatics Since 2010</span>
+          </div>
+        </div>
+        <p>Your gateway to an extraordinary underwater world. Premium fish, rare species, aquatic plants, and expert care — all under one roof.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Instagram" role="listitem"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook" role="listitem"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube" role="listitem">▶</a>
+          <a href="#" class="social-link" aria-label="TikTok" role="listitem"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest" role="listitem"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+        <div class="footer-newsletter mt-6">
+          <p>Subscribe for new arrivals & exclusive offers:</p>
+          <form class="newsletter-form" aria-label="Newsletter subscription">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Species</h4>
+        <ul>
+          <li><a href="#">Freshwater Fish</a></li>
+          <li><a href="#">Marine Fish</a></li>
+          <li><a href="#">Cichlids & Exotics</a></li>
+          <li><a href="#">Planted Tank Fish</a></li>
+          <li><a href="#">Shrimp & Invertebrates</a></li>
+          <li><a href="#">Live Coral</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Supplies</h4>
+        <ul>
+          <li><a href="#">Aquarium Tanks</a></li>
+          <li><a href="#">Filters & Pumps</a></li>
+          <li><a href="#">Aquarium Lighting</a></li>
+          <li><a href="#">Fish Food</a></li>
+          <li><a href="#">Decorations</a></li>
+          <li><a href="#">Water Treatments</a></li>
+        </ul>
+      </div>
+
+            <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">home2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-left">© 2026 AquaVista Aquatics. All rights reserved. Crafted with <i class="fa-solid fa-fish-fins"></i> by the deep sea.</p>
+      <div class="footer-bottom-right">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    document.getElementById('theme-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('theme-toggle')?.click();
+    });
+    document.getElementById('rtl-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('rtl-toggle')?.click();
+    });
+  </script>
+</body>
+</html>

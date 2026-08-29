@@ -1,0 +1,340 @@
+/* ============================================================
+   AQUAVISTA — Animations & Scroll Effects
+   ============================================================ */
+
+/* ---- Scroll Reveal Base ---- */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal.reveal-down {
+  transform: translateY(-40px);
+}
+
+.reveal.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal-scale {
+  transform: scale(0.88);
+}
+
+.reveal.reveal-rotate {
+  transform: rotate(-5deg) scale(0.9);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+.reveal-delay-7 { transition-delay: 0.7s; }
+.reveal-delay-8 { transition-delay: 0.8s; }
+
+/* ---- Page Transition ---- */
+.page-enter {
+  animation: page-in 0.35s ease forwards;
+}
+
+@keyframes page-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- Floating Bubbles Animation ---- */
+.animated-bubble {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rise-float linear infinite;
+}
+
+@keyframes rise-float {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  10% { opacity: 0.6; }
+  50% { transform: translateY(-40vh) translateX(15px) scale(1.05); }
+  90% { opacity: 0.2; }
+  100% {
+    transform: translateY(-80vh) translateX(-10px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* ---- Wave Animations ---- */
+.wave-animate {
+  animation: wave-flow 12s linear infinite;
+}
+
+.wave-animate-2 {
+  animation: wave-flow 18s linear infinite reverse;
+}
+
+/* ---- Particle / Underwater Effect ---- */
+.underwater-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,198,178,0.6), transparent);
+  animation: particle-drift ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes particle-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  25% { transform: translate(10px, -15px) scale(1.2); opacity: 0.6; }
+  50% { transform: translate(-8px, -25px) scale(0.8); opacity: 0.4; }
+  75% { transform: translate(5px, -35px) scale(1.1); opacity: 0.5; }
+}
+
+/* ---- Light Ray Effect ---- */
+.light-ray {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(56,198,178,0.4), transparent);
+  transform-origin: top center;
+  animation: ray-sway 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ray-sway {
+  0%, 100% { transform: rotate(-15deg) scaleY(1); opacity: 0.5; }
+  50% { transform: rotate(15deg) scaleY(1.2); opacity: 0.8; }
+}
+
+/* ---- Glow Pulse ---- */
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ---- Float Effect ---- */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.float-slow { animation: float 9s ease-in-out infinite; }
+.float-fast { animation: float 4s ease-in-out infinite; }
+.float-delay-2 { animation-delay: 2s; }
+.float-delay-3 { animation-delay: 3s; }
+
+/* ---- Number Counter Animation ---- */
+.counter-animate {
+  animation: count-up 0.5s ease forwards;
+}
+
+/* ---- Progress Bar Animation ---- */
+.progress-bar-animate .progress-fill {
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4,0,0.2,1) 0.3s;
+}
+.progress-bar-animate.animated .progress-fill {
+  width: var(--target-width, 0%);
+}
+
+/* ---- Hero Text Animations ---- */
+.hero-enter .hero-eyebrow {
+  animation: slide-right 0.7s ease 0.2s both;
+}
+.hero-enter .hero-title {
+  animation: fade-up 0.8s ease 0.35s both;
+}
+.hero-enter .hero-description {
+  animation: fade-up 0.8s ease 0.5s both;
+}
+.hero-enter .hero-actions {
+  animation: fade-up 0.8s ease 0.65s both;
+}
+
+/* ---- Card Hover Shine ---- */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.shine:hover::before { left: 150%; }
+
+/* ---- Morphing Gradient Background ---- */
+.morph-bg {
+  background: linear-gradient(-45deg, #071E2B, #0B5369, #38C6B2, #071E2B);
+  background-size: 400% 400%;
+  animation: morph-gradient 15s ease infinite;
+}
+
+@keyframes morph-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---- Ripple Click Effect ---- */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0);
+  animation: ripple-out 0.6s ease;
+  pointer-events: none;
+}
+@keyframes ripple-out {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ---- Scroll-triggered Underline ---- */
+.underline-animate {
+  position: relative;
+  display: inline-block;
+}
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--aquamarine), var(--coral));
+  transition: width 0.6s ease;
+}
+.underline-animate.animated::after { width: 100%; }
+
+/* ---- Typewriter Cursor ---- */
+.typewriter {
+  border-right: 3px solid var(--aquamarine);
+  animation: blink-cursor 0.75s step-end infinite;
+  display: inline;
+}
+@keyframes blink-cursor {
+  0%, 100% { border-color: var(--aquamarine); }
+  50% { border-color: transparent; }
+}
+
+/* ---- Image Parallax ---- */
+.parallax-img {
+  overflow: hidden;
+  border-radius: inherit;
+}
+.parallax-img img {
+  transform: scale(1.15);
+  will-change: transform;
+}
+
+/* ---- Tilt Effect ---- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease;
+}
+.tilt-card-inner {
+  transform: translateZ(20px);
+}
+
+/* ---- Success Animation ---- */
+.success-animation {
+  animation: success-pop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+@keyframes success-pop {
+  from { transform: scale(0) rotate(-15deg); opacity: 0; }
+  to { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+/* ---- Underwater Caustic Light ---- */
+.caustic-bg {
+  background-image:
+    radial-gradient(ellipse 60px 80px at 20% 30%, rgba(56,198,178,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40px 60px at 70% 60%, rgba(56,198,178,0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 80px 40px at 50% 80%, rgba(11,83,105,0.08) 0%, transparent 70%);
+  background-size: 300px 300px, 200px 200px, 250px 250px;
+  animation: caustic-move 20s ease-in-out infinite alternate;
+}
+
+@keyframes caustic-move {
+  0% { background-position: 0 0, 100px 50px, 50px 100px; }
+  100% { background-position: 150px 100px, 0 150px, 200px 0; }
+}
+
+/* ---- Rotating Border ---- */
+.rotating-border {
+  position: relative;
+}
+.rotating-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, var(--aquamarine), var(--deep-ocean), var(--coral), var(--aquamarine));
+  animation: rotate-border 4s linear infinite;
+  z-index: -1;
+}
+@keyframes rotate-border {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---- Nav scroll transition ---- */
+.navbar {
+  transition: height var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* ---- Hover glow line ---- */
+.hover-glow-line {
+  position: relative;
+}
+.hover-glow-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: var(--shadow-glow);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+.hover-glow-line:hover::after { opacity: 1; }

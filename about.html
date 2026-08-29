@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About AquaVista — Our story, mission, expert team, milestones and commitment to ethical aquatics since 2010.">
+  <title>About Us — AquaVista Premium Aquatics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- PAGE TRANSITION -->
+  <div id="page-transition" aria-hidden="true"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <div class="search-header">
+        <span style="color:var(--aquamarine);font-size:1.1rem;"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input class="search-input" type="search" placeholder="Search fish, plants, equipment…" autocomplete="off">
+        <button class="search-close" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">
+        <span>Press <kbd>Ctrl+K</kbd> to search anytime</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="AquaVista Home">
+        <div class="nav-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+        <div class="nav-logo-text">
+          <span class="nav-brand">AquaVista</span>
+          <span class="nav-tagline">Premium Aquatics</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="nav-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button class="nav-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <span class="rtl-icon">RTL</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
+      </div>
+
+      <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+    
+    <a href="home2.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> home2</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a><a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
+    <a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a>
+    <div class="mobile-menu-controls">
+      <button class="btn btn-outline btn-sm" id="theme-toggle-mob"><i class="fa-solid fa-moon"></i> Dark Mode</button>
+      <button class="btn btn-ghost btn-sm" id="rtl-toggle-mob">RTL</button>
+    </div>
+  </div>
+
+  <!-- ========== SECTION 1: ABOUT HERO ========== -->
+  <header class="page-hero" aria-label="About AquaVista">
+      <div class="bubbles-container" data-bubbles="16" aria-hidden="true"></div>
+      <div class="hero-bg">
+      <img src="https://plus.unsplash.com/premium_photo-1661963232839-15b865d4b13f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Magnificent coral reef aquarium" loading="eager">
+    </div>
+    <div class="container page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">About Us</span>
+      </nav>
+      <span class="section-tag">Est. 2010 · Singapore</span>
+      <h1 class="page-hero-title">A Passion Born in the <span>Deep</span></h1>
+      <p class="page-hero-desc">From a small family fishery to Southeast Asia's most celebrated aquarium destination — 16 years of dedication to the art, ethics, and science of aquatics.</p>
+    </div>
+  </header>
+
+  <!-- ========== SECTION 2: BRAND STORY ========== -->
+  <section class="section story-section" aria-labelledby="story-heading">
+    <div class="story-bg-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="brand-story">
+        
+        <!-- Left: Multi-Layer Visual Showcase -->
+        <div class="story-visual-wrap reveal reveal-left">
+          <div class="story-glow-orb" aria-hidden="true"></div>
+          
+          <!-- Main Hero Image Frame -->
+          <div class="story-main-card">
+            <img src="https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA2fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="AquaVista Master Aquascaper cultivating living reef" loading="lazy" class="story-img-main">
+            <div class="story-main-overlay"></div>
+            
+            <!-- Floating Top Badge: Heritage Pill -->
+            <div class="story-badge-top">
+              <span class="story-badge-icon"><i class="fa-solid fa-crown"></i></span>
+              <div>
+                <span class="story-badge-title">Est. 2010 · Singapore</span>
+                <span class="story-badge-sub">16 Years of Aquatic Mastery</span>
+              </div>
+            </div>
+
+            <!-- Founder Tag at Bottom -->
+            <div class="story-founder-tag">
+              <div class="founder-tag-avatar">
+                <img src="https://images.unsplash.com/photo-1605884636476-ec4bd6c8d958?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvdW5kZXJ8ZW58MHx8MHx8fDA%3D" alt="Dr. Elena Yeo">
+              </div>
+              <div class="founder-tag-info">
+                <span class="founder-name">Dr. Elena Yeo <i class="fa-solid fa-circle-check verify-badge"></i></span>
+                <span class="founder-role">Founder &amp; Marine Biologist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Floating Overlapping Card -->
+          <div class="story-floating-card reveal reveal-scale reveal-delay-3">
+            <div class="floating-card-media">
+              <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=400&q=80&auto=format&fit=crop" alt="Quarantine &amp; Coral Health Lab" loading="lazy">
+              <span class="floating-card-chip"><i class="fa-solid fa-shield-halved"></i> CITES Certified</span>
+            </div>
+            <div class="floating-card-body">
+              <div class="floating-card-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.9 / 5.0 Rating</span>
+              </div>
+              <span class="floating-card-text">Pioneering ethical aquatics &amp; coral restoration in Southeast Asia.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Story Narrative, Pillars, Stats & CTAs -->
+        <div class="brand-story-content reveal reveal-right reveal-delay-2">
+          <div class="story-header-pill">
+            <span class="section-tag"><i class="fa-solid fa-water"></i> Our Heritage &amp; Mission</span>
+          </div>
+
+          <h2 class="section-title" id="story-heading">From a 10-Gallon Study to a <span class="gradient-text">Living Ocean Sanctuary</span></h2>
+          <div class="divider left"></div>
+
+          <p class="story-lead">
+            Founded in 2010 by marine biologist <strong>Dr. Elena Yeo</strong>, AquaVista began with a home research tank in Singapore. Driven by scientific discipline and conservation ethics, it has grown into Southeast Asia’s most celebrated destination for rare marine species and master aquascapes.
+          </p>
+
+          <!-- Core Pillars / Highlights -->
+          <div class="story-pillars-grid">
+            <div class="story-pillar-item">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-microscope"></i>
+              </div>
+              <div class="pillar-content">
+                <h4 class="pillar-title">21-Day Medical Quarantine</h4>
+                <p class="pillar-desc">Every specimen is parasite-screened and certified healthy before reaching your tank.</p>
+              </div>
+            </div>
+
+            <div class="story-pillar-item">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div class="pillar-content">
+                <h4 class="pillar-title">Ethical Sourcing &amp; Reef Aid</h4>
+                <p class="pillar-desc">3% of every sale directly funds coral reef regeneration in the Coral Triangle.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-Stat High-Impact Metric Grid -->
+          <div class="brand-stats-grid">
+            <div class="brand-stat-card">
+              <div class="stat-card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+              <span class="brand-stat-num" data-count="16" data-suffix=" yrs">16 yrs</span>
+              <span class="brand-stat-label">In Business</span>
+            </div>
+            <div class="brand-stat-card">
+              <div class="stat-card-icon"><i class="fa-solid fa-user-doctor"></i></div>
+              <span class="brand-stat-num" data-count="42" data-suffix="+">42+</span>
+              <span class="brand-stat-label">Marine Biologists</span>
+            </div>
+            <div class="brand-stat-card">
+              <div class="stat-card-icon"><i class="fa-solid fa-fish"></i></div>
+              <span class="brand-stat-num" data-count="350" data-suffix="+">350+</span>
+              <span class="brand-stat-label">Living Bio-Tanks</span>
+            </div>
+            <div class="brand-stat-card">
+              <div class="stat-card-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+              <span class="brand-stat-num" data-count="99" data-suffix="%" data-decimal="false">99%</span>
+              <span class="brand-stat-label">Safe Arrival</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="story-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg ripple">
+              <i class="fa-solid fa-compass"></i> Visit Our Showroom
+            </a>
+            <a href="services.html" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Custom Aquascaping
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: MISSION & VALUES ========== -->
+  <section class="section bg-aqua-tint" aria-labelledby="values-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">What We Stand For</span>
+        <h2 class="section-title" id="values-heading">Our Mission &amp; <span class="gradient-text">Values</span></h2>
+        <p class="section-subtitle">Every decision we make — from sourcing to quarantine protocols — is guided by three core principles.</p>
+      </div>
+      <div class="values-grid reveal reveal-up reveal-delay-2">
+        <div class="value-card">
+          <span class="value-icon"><i class="fa-solid fa-water"></i></span>
+          <h3 class="value-title">Ocean Conservation</h3>
+          <p class="value-desc">We partner exclusively with sustainable breeders and certified wild-collection operations that operate within strict ecological quotas. 3% of every sale funds coral reef restoration projects.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon"><i class="fa-solid fa-microscope"></i></span>
+          <h3 class="value-title">Scientific Excellence</h3>
+          <p class="value-desc">Every species is quarantined for 21 days, parasite-treated, and health-certified by our in-house marine biology team before reaching your tank. Zero compromise on livestock health.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon"><i class="fa-solid fa-handshake"></i></span>
+          <h3 class="value-title">Community First</h3>
+          <p class="value-desc">From monthly free workshops to our online species database with 2,000+ care sheets — we believe knowledge is the most important accessory in any aquarist's toolkit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: TEAM ========== -->
+  <section class="section" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">The Experts</span>
+        <h2 class="section-title" id="team-heading">Meet Our <span class="gradient-text">Leadership</span></h2>
+        <p class="section-subtitle">42 specialists with 600+ combined years of aquarium expertise, dedicated to your tank's success.</p>
+      </div>
+      <div class="grid-4 reveal reveal-up reveal-delay-2">
+        <div class="team-card">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1758598497635-48cbbb1f6555?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZvdW5kZXJ8ZW58MHx8MHx8fDA%3D" alt="Dr. Elena Yeo - Founder" loading="lazy">
+            <div class="team-overlay">
+              <div class="footer-social" style="justify-content:center;margin-top:0;">
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-solid fa-briefcase"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fa-solid fa-feather"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Dr. Elena Yeo</h3>
+            <p class="team-role">Founder &amp; Marine Biologist</p>
+            <p style="font-size:var(--fs-xs);color:var(--text-muted);">PhD Marine Sciences, NUS. Coral restoration ambassador.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format&fit=crop&facepad=3" alt="Marcus Tan - Head Aquarist" loading="lazy">
+            <div class="team-overlay">
+              <div class="footer-social" style="justify-content:center;margin-top:0;">
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-solid fa-briefcase"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Marcus Tan</h3>
+            <p class="team-role">Head Aquarist</p>
+            <p style="font-size:var(--fs-xs);color:var(--text-muted);">20 years reef &amp; planted tanks. IAPLC Gold Medal winner.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop&facepad=3" alt="Priya Sharma - Plant Specialist" loading="lazy">
+            <div class="team-overlay">
+              <div class="footer-social" style="justify-content:center;margin-top:0;">
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-solid fa-briefcase"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Priya Sharma</h3>
+            <p class="team-role">Aquatic Plant Specialist</p>
+            <p style="font-size:var(--fs-xs);color:var(--text-muted);">Botanist &amp; aquascape designer. Dutch-style master.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1553484771-898ed465e931?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvdW5kZXJ8ZW58MHx8MHx8fDA%3D" alt="James Okafor - Care Specialist" loading="lazy">
+            <div class="team-overlay">
+              <div class="footer-social" style="justify-content:center;margin-top:0;">
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-solid fa-briefcase"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Dr. James Okafor</h3>
+            <p class="team-role">Fish Health Specialist</p>
+            <p style="font-size:var(--fs-xs);color:var(--text-muted);">Veterinary ichthyologist. Disease prevention authority.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: TIMELINE / MILESTONES ========== -->
+  <section class="section bg-deep" aria-labelledby="milestones-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag" style="background:rgba(56,198,178,0.15);border-color:rgba(56,198,178,0.3);">Our Journey</span>
+        <h2 class="section-title text-inverse" id="milestones-heading">Milestones &amp; <span class="gradient-text">Achievements</span></h2>
+      </div>
+      <div style="max-width:700px;margin-inline:auto;" class="reveal reveal-up reveal-delay-2">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2010</div>
+            <h3 class="timeline-title" style="color:var(--pearl);">Founded in Marina Bay</h3>
+            <p class="timeline-text">Dr. Elena Yeo opens a 200 sq ft boutique with 50 freshwater species. First week: sold out in 3 days.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2013</div>
+            <h3 class="timeline-title" style="color:var(--pearl);">Marine Fish Division Launched</h3>
+            <p class="timeline-text">Expanded to saltwater species. First CITES-compliant coral frag import in Singapore from sustainable Indo-Pacific sources.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2016</div>
+            <h3 class="timeline-title" style="color:var(--pearl);">Flagship Showroom Opens</h3>
+            <p class="timeline-text">8,000 sq ft three-floor showroom opens with 350 live tanks. Named "Best Aquarium Retailer Asia" by CIPS.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2020</div>
+            <h3 class="timeline-title" style="color:var(--pearl);">Online Platform &amp; Global Shipping</h3>
+            <p class="timeline-text">Launched live fish shipping to 45 countries with 98% arrival guarantee. COVID pivot: virtual tank consultations.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2026</div>
+            <h3 class="timeline-title" style="color:var(--pearl);">Coral Restoration Partnership</h3>
+            <p class="timeline-text">Partnered with Reef Check International — 3% of all revenue funds active reef restoration in the Coral Triangle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: CERTIFICATIONS & TRUST ========== -->
+  <section class="section" aria-labelledby="certs-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag"><i class="fa-solid fa-certificate"></i> Trust &amp; Credentials</span>
+        <h2 class="section-title" id="certs-heading">Certified, <span class="gradient-text">Conservation-Led</span></h2>
+        <p class="section-subtitle">Our credentials and international accreditations uphold the highest aquatic welfare standards.</p>
+      </div>
+      <div class="cert-grid reveal reveal-up reveal-delay-2">
+        <div class="cert-card">
+          <span class="cert-icon"><i class="fa-solid fa-leaf"></i></span>
+          <div>
+            <div class="cert-title">CITES Certified</div>
+            <p class="cert-body">All wild-caught species operate within CITES Appendix quotas with full traceability documentation.</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon"><i class="fa-solid fa-trophy"></i></span>
+          <div>
+            <div class="cert-title">OATA Member</div>
+            <p class="cert-body">Ornamental Aquatic Trade Association member since 2012 — upholding the highest welfare standards.</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon"><i class="fa-solid fa-microscope"></i></span>
+          <div>
+            <div class="cert-title">ISO 9001:2015</div>
+            <p class="cert-body">Quality Management certified — every process from sourcing to delivery is documented and audited.</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon"><i class="fa-solid fa-water"></i></span>
+          <div>
+            <div class="cert-title">Reef Check Partner</div>
+            <p class="cert-body">Active coral reef monitoring and restoration partner in the Coral Triangle since 2020.</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon"><i class="fa-solid fa-star"></i></span>
+          <div>
+            <div class="cert-title">4.9<i class="fa-solid fa-star"></i> TrustPilot</div>
+            <p class="cert-body">Over 3,800 verified reviews. Consistently rated #1 aquarium retailer in Southeast Asia.</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon"><i class="fa-solid fa-book-open"></i></span>
+          <div>
+            <div class="cert-title">Featured Media</div>
+            <p class="cert-body">Practical Fishkeeping, Aquarium Fish Intl, Condé Nast Traveller, and BBC Earth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: COMMUNITY & WORKSHOPS ========== -->
+  <section class="section bg-aqua-tint" aria-labelledby="community-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag"><i class="fa-solid fa-users"></i> Community &amp; Events</span>
+        <h2 class="section-title" id="community-heading">Conservation &amp; <span class="gradient-text">Workshops</span></h2>
+        <p class="section-subtitle">Join our free masterclasses, hands-on aquascaping workshops, and ocean conservation dive initiatives.</p>
+      </div>
+      <div class="community-grid reveal reveal-up reveal-delay-2">
+        <div class="community-card">
+          <img src="https://images.unsplash.com/photo-1636045466232-539c7bd7817e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA4fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="AquaVista monthly aquascape workshops" loading="lazy">
+          <div class="community-card-overlay">
+            <h3>Monthly Aquascape Workshops</h3>
+            <p>Free workshops every second Saturday for all skill levels. Learn Iwagumi, Dutch, and Nature styles.</p>
+          </div>
+        </div>
+        <div class="community-card">
+          <img src="https://images.unsplash.com/photo-1707580640921-42d78bfa19cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEwfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Reef restoration volunteer programme" loading="lazy">
+          <div class="community-card-overlay">
+            <h3>Reef Restoration Programme</h3>
+            <p>Join our volunteer diver team — helping regrow coral gardens at 3 sites across the Coral Triangle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+          <div>
+            <span class="footer-brand-name">AquaVista</span>
+            <span class="footer-tagline">Premium Aquatics Since 2010</span>
+          </div>
+        </div>
+        <p>Your gateway to an extraordinary underwater world. Premium fish, rare species, aquatic plants, and expert care — all under one roof.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Instagram" role="listitem"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook" role="listitem"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube" role="listitem">▶</a>
+          <a href="#" class="social-link" aria-label="TikTok" role="listitem"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest" role="listitem"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+        <div class="footer-newsletter mt-6">
+          <p>Subscribe for new arrivals & exclusive offers:</p>
+          <form class="newsletter-form" aria-label="Newsletter subscription">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Species</h4>
+        <ul>
+          <li><a href="#">Freshwater Fish</a></li>
+          <li><a href="#">Marine Fish</a></li>
+          <li><a href="#">Cichlids & Exotics</a></li>
+          <li><a href="#">Planted Tank Fish</a></li>
+          <li><a href="#">Shrimp & Invertebrates</a></li>
+          <li><a href="#">Live Coral</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Supplies</h4>
+        <ul>
+          <li><a href="#">Aquarium Tanks</a></li>
+          <li><a href="#">Filters & Pumps</a></li>
+          <li><a href="#">Aquarium Lighting</a></li>
+          <li><a href="#">Fish Food</a></li>
+          <li><a href="#">Decorations</a></li>
+          <li><a href="#">Water Treatments</a></li>
+        </ul>
+      </div>
+
+            <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">home2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-left">© 2026 AquaVista Aquatics. All rights reserved. Crafted with <i class="fa-solid fa-fish-fins"></i> by the deep sea.</p>
+      <div class="footer-bottom-right">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    document.getElementById('theme-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('theme-toggle')?.click();
+    });
+    document.getElementById('rtl-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('rtl-toggle')?.click();
+    });
+  </script>
+</body>
+</html>

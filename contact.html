@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AquaVista — Enquire about rare fish, custom tank setup, special orders, or visit our flagship Singapore showroom.">
+  <title>Contact Us — AquaVista Premium Aquatics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- PAGE TRANSITION -->
+  <div id="page-transition" aria-hidden="true"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <div class="search-header">
+        <span style="color:var(--aquamarine);font-size:1.1rem;"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input class="search-input" type="search" placeholder="Search fish, plants, equipment…" autocomplete="off">
+        <button class="search-close" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">
+        <span>Press <kbd>Ctrl+K</kbd> to search anytime</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="AquaVista Home">
+        <div class="nav-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+        <div class="nav-logo-text">
+          <span class="nav-brand">AquaVista</span>
+          <span class="nav-tagline">Premium Aquatics</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="nav-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button class="nav-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <span class="rtl-icon">RTL</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
+      </div>
+
+      <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+    
+    <a href="home2.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> home2</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a><a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
+    <a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a>
+    <div class="mobile-menu-controls">
+      <button class="btn btn-outline btn-sm" id="theme-toggle-mob"><i class="fa-solid fa-moon"></i> Dark Mode</button>
+      <button class="btn btn-ghost btn-sm" id="rtl-toggle-mob">RTL</button>
+    </div>
+  </div>
+
+  <!-- ========== SECTION 1: CONTACT HERO ========== -->
+  <header class="page-hero" aria-label="Contact Hero">
+      <div class="bubbles-container" data-bubbles="16" aria-hidden="true"></div>
+      <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1514855170001-ee95e4302737?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="AquaVista store showroom interior" loading="eager">
+    </div>
+    <div class="container page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Contact</span>
+      </nav>
+      <span class="section-tag">Get in Touch</span>
+      <h1 class="page-hero-title">We're Here to <span>Help</span></h1>
+      <p class="page-hero-desc">Whether you're a curious beginner or a seasoned aquarist — our team of marine biologists is ready to assist with species enquiries, custom tank builds, or care consultations.</p>
+      <div class="hero-actions" style="margin-top:var(--sp-6);">
+        <a href="#enquiry" class="btn btn-primary btn-lg ripple">Send Enquiry</a>
+        <a href="tel:+6561234567" class="btn btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> +65 6123 4567</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== SECTION 2: ENQUIRY FORM & STORE INFO ========== -->
+  <section class="section" id="enquiry" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Store Info -->
+        <div class="reveal reveal-left">
+          <span class="section-tag">Store Info</span>
+          <h2 class="section-title" id="contact-heading" style="margin-top:var(--sp-2);">Find &amp; <span class="gradient-text">Connect</span></h2>
+          <div class="divider left"></div>
+          <div class="store-info-card">
+            <div class="store-info-item">
+              <div class="store-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="store-info-text">
+                <h5>Showroom Address</h5>
+                <p>42 Aquamarine Boulevard, Marina Bay<br>Singapore 018974</p>
+              </div>
+            </div>
+            <div class="store-info-item">
+              <div class="store-info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="store-info-text">
+                <h5>Phone</h5>
+                <p><a href="tel:+6561234567" style="color:var(--aquamarine);font-weight:600;">+65 6123 4567</a></p>
+              </div>
+            </div>
+            <div class="store-info-item">
+              <div class="store-info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="store-info-text">
+                <h5>Email</h5>
+                <p><a href="mailto:hello@aquavista.com" style="color:var(--aquamarine);">hello@aquavista.com</a><br><a href="mailto:orders@aquavista.com" style="color:var(--aquamarine);">orders@aquavista.com</a></p>
+              </div>
+            </div>
+            <div class="store-info-item">
+              <div class="store-info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="store-info-text">
+                <h5>Opening Hours</h5>
+                <p>Mon–Fri: 9:00 AM – 8:00 PM<br>Sat: 8:00 AM – 9:00 PM<br>Sun &amp; Public Holidays: 10:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-contact-grid mt-6">
+            <a href="#" class="social-contact-item">
+              <div class="social-contact-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div><div class="social-contact-text">Instagram</div><div class="social-contact-handle">@aquavista_sg</div></div>
+            </a>
+            <a href="#" class="social-contact-item">
+              <div class="social-contact-icon"><i class="fa-brands fa-facebook"></i></div>
+              <div><div class="social-contact-text">Facebook</div><div class="social-contact-handle">/AquaVistaSG</div></div>
+            </a>
+            <a href="#" class="social-contact-item">
+              <div class="social-contact-icon">▶</div>
+              <div><div class="social-contact-text">YouTube</div><div class="social-contact-handle">AquaVista TV</div></div>
+            </a>
+            <a href="#" class="social-contact-item">
+              <div class="social-contact-icon"><i class="fa-brands fa-tiktok"></i></div>
+              <div><div class="social-contact-text">TikTok</div><div class="social-contact-handle">@aquavista</div></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enquiry Form -->
+        <div class="contact-form-wrap reveal reveal-right reveal-delay-2">
+          <h3 style="font-family:var(--font-serif);font-size:var(--fs-2xl);margin-bottom:var(--sp-2);">Send an Enquiry</h3>
+          <p style="color:var(--text-muted);font-size:var(--fs-sm);margin-bottom:var(--sp-8);">We respond within 24 hours on business days. For urgent matters, please call us directly.</p>
+
+          <div id="form-success">
+            <div style="font-size:4rem;"><i class="fa-solid fa-fish-fins"></i></div>
+            <h3 style="font-family:var(--font-serif);font-size:var(--fs-2xl);">Message Received!</h3>
+            <p style="color:var(--text-muted);">Thank you for contacting AquaVista. Our marine biology team will respond within 24 hours.</p>
+          </div>
+
+          <form id="enquiry-form" novalidate aria-label="Contact enquiry form">
+            <div class="contact-form-grid" style="margin-bottom:var(--sp-4);">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">First Name <span class="required">*</span></label>
+                <input class="form-control" type="text" id="contact-name" name="first_name" placeholder="Marcus" required autocomplete="given-name">
+                <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please enter your name</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-lastname">Last Name <span class="required">*</span></label>
+                <input class="form-control" type="text" id="contact-lastname" name="last_name" placeholder="Chen" required autocomplete="family-name">
+                <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please enter your last name</div>
+              </div>
+            </div>
+            <div class="contact-form-grid" style="margin-bottom:var(--sp-4);">
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email <span class="required">*</span></label>
+                <input class="form-control" type="email" id="contact-email" name="email" placeholder="marcus@example.com" required autocomplete="email">
+                <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Valid email required</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone</label>
+                <input class="form-control" type="tel" id="contact-phone" name="phone" placeholder="+65 9123 4567" autocomplete="tel">
+                <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Valid phone number required</div>
+              </div>
+            </div>
+            <div class="form-group contact-form-full" style="margin-bottom:var(--sp-4);">
+              <label class="form-label" for="contact-subject">Subject <span class="required">*</span></label>
+              <select class="form-control" id="contact-subject" name="subject" required>
+                <option value="">Select enquiry type…</option>
+                <option value="species">Fish / Species Availability</option>
+                <option value="special-order">Special Order Request</option>
+                <option value="tank-setup">Tank Design &amp; Setup</option>
+                <option value="maintenance">Maintenance Service Plan</option>
+                <option value="consultation">Care Consultation</option>
+                <option value="wholesale">Wholesale / Commercial</option>
+                <option value="other">General Enquiry</option>
+              </select>
+              <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please select a subject</div>
+            </div>
+            <div class="form-group contact-form-full" style="margin-bottom:var(--sp-4);">
+              <label class="form-label" for="contact-message">Your Message <span class="required">*</span></label>
+              <textarea class="form-control" id="contact-message" name="message" rows="5" placeholder="Tell us about your aquarium, what you're looking for, tank size, experience level…" required minlength="20" maxlength="1500"></textarea>
+              <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please write at least 20 characters</div>
+            </div>
+            <div class="form-group contact-form-full" style="margin-bottom:var(--sp-6);">
+              <label style="display:flex;align-items:flex-start;gap:var(--sp-3);cursor:pointer;font-size:var(--fs-sm);color:var(--text-secondary);">
+                <input type="checkbox" name="newsletter" style="margin-top:3px;accent-color:var(--aquamarine);">
+                Subscribe to our weekly care guide newsletter and new arrivals alerts
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg contact-form-full" style="width:100%;justify-content:center;" id="submit-btn">Send Enquiry →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: STORE MAP BANNER ========== -->
+  <section class="section-sm" aria-label="Store location map">
+    <div class="container">
+      <div class="map-container reveal reveal-up" style="height:440px;">
+        <iframe class="store-map" src="https://maps.google.com/maps?q=42%20Aquamarine%20Boulevard%2C%20Marina%20Bay%2C%20Singapore%20018974&amp;z=15&amp;output=embed" title="AquaVista Flagship Store location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-info-card">
+          <div style="font-size:1.75rem;margin-bottom:var(--sp-2);color:var(--aquamarine);"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 style="font-family:var(--font-serif);color:var(--pearl);font-size:var(--fs-xl);margin-bottom:var(--sp-1);">AquaVista Flagship Store</h3>
+          <p style="color:rgba(242,247,245,0.8);margin-bottom:var(--sp-4);font-size:var(--fs-sm);">42 Aquamarine Boulevard, Marina Bay, Singapore 018974</p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=42%20Aquamarine%20Boulevard%2C%20Marina%20Bay%2C%20Singapore%20018974" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: FAQ QUICK ========== -->
+  <section class="section bg-aqua-tint" aria-labelledby="contact-faq-heading">
+    <div class="container container-narrow">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">Quick Answers</span>
+        <h2 class="section-title" id="contact-faq-heading">Frequently <span class="gradient-text">Asked</span></h2>
+        <p class="section-subtitle">Quick answers to common questions about ordering, shipping, and visits.</p>
+      </div>
+      <div class="faq-quick reveal reveal-up reveal-delay-2">
+        <div class="faq-quick-item">
+          <div class="faq-quick-q"><i class="fa-solid fa-clock"></i> How quickly will you respond?</div>
+          <div class="faq-quick-a">All email enquiries are answered within 24 hours on business days. Phone calls are answered during store hours. For urgent livestock health emergencies, call directly at +65 6123 4567.</div>
+        </div>
+        <div class="faq-quick-item">
+          <div class="faq-quick-q"><i class="fa-solid fa-box"></i> Do you ship livestock internationally?</div>
+          <div class="faq-quick-a">Yes, we ship to 45 countries via specialised livestock couriers with 99.2% live arrival guarantee. Minimum order values, CITES permits, and seasonal weather restrictions apply.</div>
+        </div>
+        <div class="faq-quick-item">
+          <div class="faq-quick-q"><i class="fa-solid fa-credit-card"></i> What payment methods do you accept?</div>
+          <div class="faq-quick-a">We accept all major credit cards (Visa, MasterCard, Amex), PayPal, bank transfers, and PayNow. A 50% deposit is required for special orders and custom aquarium builds.</div>
+        </div>
+        <div class="faq-quick-item">
+          <div class="faq-quick-q"><i class="fa-solid fa-rotate"></i> What is your return and DOA policy?</div>
+          <div class="faq-quick-a">Live fish have a strict 48-hour live arrival guarantee. Equipment comes with a 30-day exchange guarantee. Dead On Arrival (DOA) claims require photo evidence within 2 hours of package delivery for full replacement or store credit.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+          <div>
+            <span class="footer-brand-name">AquaVista</span>
+            <span class="footer-tagline">Premium Aquatics Since 2010</span>
+          </div>
+        </div>
+        <p>Your gateway to an extraordinary underwater world. Premium fish, rare species, aquatic plants, and expert care — all under one roof.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Instagram" role="listitem"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook" role="listitem"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube" role="listitem">▶</a>
+          <a href="#" class="social-link" aria-label="TikTok" role="listitem"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest" role="listitem"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+        <div class="footer-newsletter mt-6">
+          <p>Subscribe for new arrivals & exclusive offers:</p>
+          <form class="newsletter-form" aria-label="Newsletter subscription">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Species</h4>
+        <ul>
+          <li><a href="#">Freshwater Fish</a></li>
+          <li><a href="#">Marine Fish</a></li>
+          <li><a href="#">Cichlids & Exotics</a></li>
+          <li><a href="#">Planted Tank Fish</a></li>
+          <li><a href="#">Shrimp & Invertebrates</a></li>
+          <li><a href="#">Live Coral</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Supplies</h4>
+        <ul>
+          <li><a href="#">Aquarium Tanks</a></li>
+          <li><a href="#">Filters & Pumps</a></li>
+          <li><a href="#">Aquarium Lighting</a></li>
+          <li><a href="#">Fish Food</a></li>
+          <li><a href="#">Decorations</a></li>
+          <li><a href="#">Water Treatments</a></li>
+        </ul>
+      </div>
+
+            <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">home2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-left">© 2026 AquaVista Aquatics. All rights reserved. Crafted with <i class="fa-solid fa-fish-fins"></i> by the deep sea.</p>
+      <div class="footer-bottom-right">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    document.getElementById('theme-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('theme-toggle')?.click();
+    });
+    document.getElementById('rtl-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('rtl-toggle')?.click();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found — AquaVista. The page you are looking for has moved or does not exist.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>404 — Page Not Found · AquaVista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--abyss) 0%, var(--deep-ocean) 60%, var(--abyss) 100%);
+    }
+
+    /* Animated deep-sea background */
+    .error-bg {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .error-bg img {
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: 0.18; filter: saturate(0.3);
+    }
+    .error-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, rgba(56,198,178,0.08) 0%, transparent 70%);
+    }
+
+    /* Animated 404 number */
+    .error-number {
+      font-family: var(--font-serif);
+      font-size: clamp(8rem, 20vw, 18rem);
+      line-height: 1;
+      background: linear-gradient(135deg, rgba(56,198,178,0.15) 0%, rgba(56,198,178,0.05) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -55%);
+      pointer-events: none; z-index: 0;
+      letter-spacing: -0.05em;
+      text-shadow: none;
+      /* outline effect */
+      -webkit-text-stroke: 1px rgba(56,198,178,0.2);
+      animation: float-404 6s ease-in-out infinite;
+      user-select: none;
+    }
+    @keyframes float-404 {
+      0%, 100% { transform: translate(-50%, -55%); }
+      50% { transform: translate(-50%, -58%); }
+    }
+
+    /* Glowing fish animation */
+    .lost-fish {
+      font-size: clamp(5rem, 10vw, 9rem);
+      animation: swim-lost 8s ease-in-out infinite;
+      display: block; margin: 0 auto var(--sp-6);
+      filter: drop-shadow(0 0 30px rgba(56,198,178,0.5));
+      cursor: pointer;
+    }
+    @keyframes swim-lost {
+      0%   { transform: translateX(0) rotate(0deg) scaleX(1); }
+      25%  { transform: translateX(20px) rotate(-5deg) scaleX(1); }
+      50%  { transform: translateX(-15px) rotate(5deg) scaleX(1); }
+      75%  { transform: translateX(10px) rotate(-3deg) scaleX(-1); }
+      100% { transform: translateX(0) rotate(0deg) scaleX(1); }
+    }
+
+    .error-content {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      flex: 1; text-align: center;
+      padding: var(--sp-12) var(--sp-6);
+    }
+
+    .error-eyebrow {
+      font-size: var(--fs-xs); font-weight: 800;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--aquamarine);
+      background: rgba(56,198,178,0.1);
+      border: 1px solid rgba(56,198,178,0.25);
+      padding: var(--sp-2) var(--sp-5);
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-bottom: var(--sp-6);
+    }
+    .error-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--pearl);
+      margin-bottom: var(--sp-5);
+      line-height: 1.2;
+    }
+    .error-title span { color: var(--aquamarine); }
+    .error-desc {
+      color: rgba(242,247,245,0.65);
+      font-size: var(--fs-lg);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: var(--sp-10);
+    }
+    .error-actions { display:flex;gap:var(--sp-4);flex-wrap:wrap;justify-content:center;margin-bottom:var(--sp-12); }
+
+    /* Search bar on 404 */
+    .error-search {
+      display: flex; gap: 0; max-width: 460px; width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(56,198,178,0.3);
+      border-radius: var(--radius-full);
+      overflow: hidden; backdrop-filter: blur(10px);
+      margin: 0 auto var(--sp-12);
+    }
+    .error-search input {
+      flex: 1; background: transparent; border: none; outline: none;
+      padding: var(--sp-4) var(--sp-6);
+      font-family: var(--font-sans); font-size: var(--fs-sm);
+      color: var(--pearl);
+    }
+    .error-search input::placeholder { color: rgba(242,247,245,0.4); }
+    .error-search button {
+      padding: var(--sp-4) var(--sp-6);
+      background: linear-gradient(135deg, var(--aquamarine), var(--aquamarine-dark));
+      border: none; cursor: pointer;
+      color: var(--abyss); font-weight: 800; font-size: var(--fs-sm);
+      font-family: var(--font-sans); transition: all var(--transition-fast);
+    }
+    .error-search button:hover { opacity: 0.9; }
+
+    /* Quick links */
+    .quick-links {
+      display: flex; flex-wrap: wrap; gap: var(--sp-3);
+      justify-content: center; margin-bottom: var(--sp-8);
+    }
+    .quick-link {
+      display: flex; align-items: center; gap: var(--sp-2);
+      padding: var(--sp-3) var(--sp-5);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(242,247,245,0.1);
+      border-radius: var(--radius-full);
+      color: rgba(242,247,245,0.75);
+      font-size: var(--fs-sm); font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition-spring);
+      backdrop-filter: blur(8px);
+    }
+    .quick-link:hover {
+      background: rgba(56,198,178,0.12);
+      border-color: rgba(56,198,178,0.4);
+      color: var(--aquamarine);
+      transform: translateY(-2px);
+    }
+
+    /* Bubbles rising */
+    .error-bubbles { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+
+    /* Countdown */
+    .auto-redirect {
+      font-size: var(--fs-xs); color: rgba(242,247,245,0.4);
+      margin-top: var(--sp-6);
+    }
+    .countdown-num { color: var(--aquamarine); font-weight: 700; }
+
+    /* Mini navbar */
+    .error-nav { position:relative;z-index:10;padding:var(--sp-5) var(--sp-8);display:flex;align-items:center;justify-content:space-between; }
+    .error-nav a { color: var(--pearl); text-decoration: none; font-size: var(--fs-sm); font-weight: 600; font-family: var(--font-sans); }
+    .error-nav a:hover { color: var(--aquamarine); }
+    .error-nav .error-logo { display:flex;align-items:center;gap:var(--sp-3); }
+    .error-nav .error-logo-icon { font-size:1.5rem; }
+    .error-nav .error-logo-name { font-family: var(--font-serif); font-size: var(--fs-xl); color: var(--pearl); }
+
+    /* Random species cards */
+    .species-suggest { display:flex;gap:var(--sp-4);flex-wrap:wrap;justify-content:center;max-width:800px;width:100%; }
+    .species-chip {
+      display:flex;align-items:center;gap:var(--sp-2);
+      background:rgba(255,255,255,0.05);border:1px solid rgba(56,198,178,0.15);
+      border-radius:var(--radius-lg);padding:var(--sp-3) var(--sp-4);
+      font-size:var(--fs-xs);color:rgba(242,247,245,0.7);
+      text-decoration:none;transition:all var(--transition-fast);
+    }
+    .species-chip:hover { border-color:var(--aquamarine);color:var(--aquamarine);background:rgba(56,198,178,0.08); }
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<div id="page-transition" aria-hidden="true"></div>
+
+<div class="error-page" role="main">
+  <!-- Background -->
+  <div class="error-bg">
+    <img src="https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=1920&q=70&auto=format&fit=crop" alt="" aria-hidden="true">
+  </div>
+  <div class="error-bubbles" data-bubbles="20" aria-hidden="true"></div>
+
+  <!-- Big faded 404 -->
+  <div class="error-number" aria-hidden="true">404</div>
+
+  <!-- Mini Nav -->
+  <nav class="error-nav" aria-label="Error page navigation">
+    <a href="index.html" class="error-logo">
+      <span class="error-logo-icon"><i class="fa-solid fa-fish-fins"></i></span>
+      <span class="error-logo-name">AquaVista</span>
+    </a>
+    <div style="display:flex;gap:var(--sp-6);">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-toggle" class="nav-btn" aria-label="Toggle dark mode"><span class="theme-icon"><i class="fa-solid fa-moon"></i></span></button>
+    </div>
+  </nav>
+
+  <!-- Error Content -->
+  <div class="error-content">
+    <span class="lost-fish" role="img" aria-label="Lost fish" title="Click me!"><i class="fa-solid fa-circle-info"></i></span>
+    <div class="error-eyebrow">Error 404 · Page Not Found</div>
+    <h1 class="error-title">This Fish Has<br><span>Swum Away</span></h1>
+    <p class="error-desc">The page you're looking for has either moved, been renamed, or is currently hiding in the coral. Let's help you find your way back.</p>
+
+    <!-- Search -->
+    <div class="error-search" role="search">
+      <input type="search" placeholder="Search for fish, plants, guides…" aria-label="Search the site" id="error-search-input">
+      <button type="button" aria-label="Search" onclick="window.location.href='index.html'"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="error-actions">
+      <a href="index.html" class="btn btn-primary btn-lg ripple"><i class="fa-solid fa-house"></i> Return Home</a>
+      <a href="contact.html" class="btn btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> Contact Support</a>
+    </div>
+
+    <!-- Species suggestions -->
+    <p style="color:rgba(242,247,245,0.35);font-size:var(--fs-xs);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-4);margin-top:var(--sp-6);">While you're here — discover these species</p>
+    <div class="species-suggest">
+      <a href="index.html" class="species-chip"><i class="fa-solid fa-fish-fins"></i> Blue Tang</a>
+      <a href="index.html" class="species-chip"><i class="fa-solid fa-fish"></i> Clownfish</a>
+      <a href="index.html" class="species-chip"><i class="fa-solid fa-fish"></i> Discus</a>
+      <a href="home2.html" class="species-chip"><i class="fa-solid fa-fish-fins"></i> Emperor Angelfish</a>
+      <a href="home2.html" class="species-chip"><i class="fa-solid fa-leaf"></i> Java Fern</a>
+      <a href="index.html" class="species-chip"><i class="fa-solid fa-shrimp"></i> Cherry Shrimp</a>
+      <a href="home2.html" class="species-chip"><i class="fa-solid fa-leaf"></i> Live Coral</a>
+    </div>
+
+    <!-- Auto redirect countdown -->
+    <p class="auto-redirect" id="auto-redirect-msg">Redirecting to home in <span class="countdown-num" id="countdown-timer">15</span> seconds</p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script>
+  // Bubble initialization for error page
+  (function() {
+    const container = document.querySelector('.error-bubbles');
+    if (container) {
+      for (let i = 0; i < 20; i++) {
+        const b = document.createElement('div');
+        b.className = 'bubble';
+        b.style.cssText = `
+          left:${Math.random() * 100}%;
+          width:${Math.random() * 20 + 6}px;
+          height:${Math.random() * 20 + 6}px;
+          animation-delay:${Math.random() * 8}s;
+          animation-duration:${Math.random() * 8 + 6}s;
+        `;
+        container.appendChild(b);
+      }
+    }
+
+    // Countdown redirect
+    let count = 15;
+    const timer = document.getElementById('countdown-timer');
+    const msg = document.getElementById('auto-redirect-msg');
+    if (timer) {
+      const interval = setInterval(() => {
+        count--;
+        timer.textContent = count;
+        if (count <= 0) {
+          clearInterval(interval);
+          window.location.href = 'index.html';
+        }
+      }, 1000);
+    }
+
+    // Fun fish click
+    document.querySelector('.lost-fish')?.addEventListener('click', function() {
+      this.style.animation = 'none';
+      setTimeout(() => this.style.animation = '', 50);
+    });
+  })();
+</script>
+</body>
+</html>

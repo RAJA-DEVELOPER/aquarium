@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Ultimate Guide to Your First Planted Aquarium — Expert care guide by Dr. Elena Yeo, marine biologist at AquaVista.">
+  <title>The Ultimate Planted Aquarium Guide — AquaVista Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* ===== Article skeleton loader ===== */
+    .article-skeleton { padding: var(--sp-4) 0; }
+    .skeleton-line {
+      height: 1rem;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(90deg,
+        var(--bg-card) 25%,
+        rgba(56,198,178,0.08) 50%,
+        var(--bg-card) 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer 1.6s infinite;
+      margin-bottom: var(--sp-4);
+    }
+    .skeleton-line.wide  { width: 95%; }
+    .skeleton-line.medium{ width: 75%; }
+    .skeleton-line.narrow{ width: 50%; }
+    @keyframes skeleton-shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE TRANSITION & READING PROGRESS -->
+  <div id="page-transition" aria-hidden="true"></div>
+  <div id="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <div class="search-header">
+        <span style="color:var(--aquamarine);font-size:1.1rem;"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input class="search-input" type="search" placeholder="Search fish, plants, equipment…" autocomplete="off">
+        <button class="search-close" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="search-results"></div>
+      <div class="search-hint">
+        <span>Press <kbd>Ctrl+K</kbd> to search anytime</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="AquaVista Home">
+        <div class="nav-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+        <div class="nav-logo-text">
+          <span class="nav-brand">AquaVista</span>
+          <span class="nav-tagline">Premium Aquatics</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="home2.html" class="nav-link">home2</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="nav-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button class="nav-btn" id="rtl-toggle" aria-label="Toggle RTL">
+          <span class="rtl-icon">RTL</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
+      </div>
+
+      <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="home2.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> home2</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
+    <a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a>
+    <div class="mobile-menu-controls">
+      <button class="btn btn-outline btn-sm" id="theme-toggle-mob"><i class="fa-solid fa-moon"></i> Dark Mode</button>
+      <button class="btn btn-ghost btn-sm" id="rtl-toggle-mob">RTL</button>
+    </div>
+  </div>
+
+  <!-- ========== SECTION 1: ARTICLE HERO ========== -->
+  <header class="article-hero" aria-label="Article header">
+    <div class="bubbles-container" data-bubbles="14" aria-hidden="true"></div>
+    <div class="article-hero-bg">
+      <img id="article-hero-img" src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1920&q=85&auto=format&fit=crop" alt="Lush planted aquarium" loading="eager">
+    </div>
+    <div class="container article-hero-content">
+      <nav class="breadcrumb article-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <a href="blog.html">Blog</a>
+        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="breadcrumb-current" id="article-crumb">Planted Aquarium Guide</span>
+      </nav>
+
+      <div class="tags article-hero-tags" id="article-tags">
+        <span class="badge badge-aqua">Planted Tank</span>
+        <span class="badge" style="background:rgba(229,139,123,0.2);color:var(--coral);">Beginner Guide</span>
+      </div>
+
+      <h1 id="article-title" class="article-hero-title">The Ultimate Guide to Your First Planted Aquarium</h1>
+
+      <div class="article-meta-bar">
+        <div class="article-author-info">
+          <img id="article-author-img" src="https://images.unsplash.com/photo-1494790108755-2616b612b9cd?w=100&q=80&auto=format&fit=crop&facepad=3" alt="Dr Elena Yeo" class="article-author-avatar">
+          <div class="article-author-text">
+            <div id="article-author-name" class="article-author-name">Dr. Elena Yeo</div>
+            <div id="article-author-role" class="article-author-role">Founder &amp; Marine Biologist</div>
+          </div>
+        </div>
+        <div class="article-meta-divider" aria-hidden="true"></div>
+        <div class="article-meta-stats">
+          <span class="article-meta-item" id="article-date"><i class="fa-solid fa-calendar"></i> August 15, 2026</span>
+          <span class="article-meta-item" id="article-read"><i class="fa-solid fa-clock"></i> 18 min read</span>
+          <span class="article-meta-item" id="article-views"><i class="fa-solid fa-eye"></i> 12,840 views</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== SECTION 2: ARTICLE BODY ========== -->
+  <section class="section" aria-label="Article content" style="padding-top:var(--sp-12);">
+    <div class="container">
+      <div class="article-layout">
+        <!-- Main Content — populated dynamically by blog-data.js -->
+        <main class="article-body" id="article-content">
+          <!-- Loading skeleton shown briefly before JS hydrates content -->
+          <div class="article-skeleton" id="article-skeleton" aria-hidden="true">
+            <div class="skeleton-line wide"></div>
+            <div class="skeleton-line wide"></div>
+            <div class="skeleton-line medium"></div>
+            <div class="skeleton-line wide"></div>
+            <div class="skeleton-line narrow"></div>
+          </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          <div class="sidebar-card toc-card" id="article-toc">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-icon"><i class="fa-solid fa-list-ul"></i></span>
+              <h4 class="sidebar-card-title">Table of Contents</h4>
+            </div>
+            <div class="toc-links-wrapper">
+              <a href="#why-planted" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 1. Why Planted Aquariums?</a>
+              <a href="#choosing-tank" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 2. Choosing the Right Tank</a>
+              <a href="#substrate" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 3. Substrate Selection</a>
+              <a href="#lighting" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 4. Lighting Essentials</a>
+              <a href="#co2" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 5. CO₂ Injection</a>
+              <a href="#plants" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 6. Choosing Your Plants</a>
+              <a href="#fish" class="toc-link"><i class="fa-solid fa-chevron-right"></i> 7. Fish Selection</a>
+            </div>
+          </div>
+
+          <div class="sidebar-card products-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+              <h4 class="sidebar-card-title">Featured Products</h4>
+            </div>
+            <div class="sidebar-products-list">
+              <div class="sidebar-product-item">
+                <img src="https://plus.unsplash.com/premium_photo-1669822277951-5bb0003e8502?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjQ1fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Java Fern" class="sidebar-product-img">
+                <div class="sidebar-product-info">
+                  <div class="sidebar-product-name">Java Fern Bundle</div>
+                  <div class="sidebar-product-price">From $18</div>
+                </div>
+              </div>
+              <div class="sidebar-product-item">
+                <img src="https://images.unsplash.com/photo-1763345181042-87ade714d7ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjUxfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Amazon Sword" class="sidebar-product-img">
+                <div class="sidebar-product-info">
+                  <div class="sidebar-product-name">Amazon Sword</div>
+                  <div class="sidebar-product-price">$24</div>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary btn-sm sidebar-cta-btn">Shop Plants →</a>
+          </div>
+
+          <div class="sidebar-card topics-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-icon"><i class="fa-solid fa-hashtag"></i></span>
+              <h4 class="sidebar-card-title">Related Topics</h4>
+            </div>
+            <div class="tags sidebar-tags">
+              <a href="blog.html" class="tag">Planted Tank</a>
+              <a href="blog.html" class="tag">CO₂</a>
+              <a href="blog.html" class="tag">Aquascape</a>
+              <a href="blog.html" class="tag">Substrate</a>
+              <a href="blog.html" class="tag">LED Lighting</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: RELATED PRODUCTS ========== -->
+  <section class="section bg-aqua-tint" aria-labelledby="related-products-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">From This Guide</span>
+        <h2 class="section-title" id="related-products-heading">Recommended <span class="gradient-text">Species &amp; Supplies</span></h2>
+        <p class="section-subtitle">Specimens and accessories referenced in this guide, available in our store.</p>
+      </div>
+      <div class="grid-4 reveal reveal-up reveal-delay-2">
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="https://plus.unsplash.com/premium_photo-1685809052972-a3a563355796?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjUzfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Java Fern" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <div class="product-category">Aquatic Plant</div>
+            <h3 class="product-name">Java Fern</h3>
+            <p class="product-scientific">Microsorum pteropus</p>
+            <div class="product-footer">
+              <div class="product-price"><span class="current">$18.00</span></div>
+              <a href="contact.html" class="product-add-btn" aria-label="Order Java Fern">+</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1613475103889-e6462ac331bd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Amazon Sword" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <div class="product-category">Aquatic Plant</div>
+            <h3 class="product-name">Amazon Sword</h3>
+            <p class="product-scientific">Echinodorus grisebachii</p>
+            <div class="product-footer">
+              <div class="product-price"><span class="current">$24.00</span></div>
+              <a href="contact.html" class="product-add-btn" aria-label="Order Amazon Sword">+</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="https://plus.unsplash.com/premium_photo-1764859474240-a2ae85306251?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU3fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Anubias" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <div class="product-category">Aquatic Plant</div>
+            <h3 class="product-name">Anubias Barteri</h3>
+            <p class="product-scientific">Anubias barteri var. nana</p>
+            <div class="product-footer">
+              <div class="product-price"><span class="current">$15.00</span></div>
+              <a href="contact.html" class="product-add-btn" aria-label="Order Anubias">+</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1592237163215-c97b487faeb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYzfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Cardinal Tetra" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <div class="product-category">Freshwater Fish</div>
+            <h3 class="product-name">Cardinal Tetra</h3>
+            <p class="product-scientific">Paracheirodon axelrodi</p>
+            <div class="product-footer">
+              <div class="product-price"><span class="current">$12.00</span></div>
+              <a href="contact.html" class="product-add-btn" aria-label="Order Cardinal Tetra">+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: RELATED ARTICLES ========== -->
+  <section class="section" aria-labelledby="related-articles-heading">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">Continue Reading</span>
+        <h2 class="section-title" id="related-articles-heading">Related <span class="gradient-text">Articles</span></h2>
+        <p class="section-subtitle">Deepen your aquarium knowledge with more specialist guides.</p>
+      </div>
+      <div class="related-grid reveal reveal-up reveal-delay-2">
+        <a href="blog-details.html?id=reef-tank-2026" class="related-card" style="text-decoration:none;">
+          <img src="https://images.unsplash.com/photo-1695145752654-1830d43f43a8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY0fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Reef tank setup" loading="lazy">
+          <div class="related-card-info"><h4>Building a Thriving Reef Tank in 2026</h4></div>
+        </a>
+        <a href="blog-details.html?id=discus-care" class="related-card" style="text-decoration:none;">
+          <img src="https://images.unsplash.com/photo-1638818989927-9012a5a439cf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY4fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Discus fish guide" loading="lazy">
+          <div class="related-card-info"><h4>Discus Fish: The Complete Care Guide</h4></div>
+        </a>
+        <a href="blog-details.html?id=white-spot-ich" class="related-card" style="text-decoration:none;">
+          <img src="https://images.unsplash.com/photo-1675652158039-2a0042216593?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjc5fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Fish disease treatment" loading="lazy">
+          <div class="related-card-info"><h4>Diagnosing &amp; Treating White Spot (Ich)</h4></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: COMMENTS ========== -->
+  <section class="section bg-aqua-tint" aria-labelledby="comments-heading">
+    <div class="container container-text">
+      <div class="section-header reveal reveal-up">
+        <span class="section-tag">Community</span>
+        <h2 class="section-title" id="comments-heading">Join the <span class="gradient-text">Discussion</span></h2>
+        <p class="section-subtitle">Have a question or tip about planted tanks? Share with our aquarist community.</p>
+      </div>
+      <form id="contact-form" class="reveal reveal-up reveal-delay-2" style="background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-xl);padding:var(--sp-8);backdrop-filter:blur(10px);" aria-label="Leave a comment">
+        <div class="grid-2" style="gap:var(--sp-4);margin-bottom:var(--sp-4);">
+          <div class="form-group">
+            <label class="form-label">Your Name <span class="required">*</span></label>
+            <input class="form-control" type="text" name="name" placeholder="Marcus Chen" required autocomplete="name">
+            <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please enter your name</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email <span class="required">*</span></label>
+            <input class="form-control" type="email" name="email" placeholder="hello@example.com" required autocomplete="email">
+            <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Valid email required</div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:var(--sp-5);">
+          <label class="form-label">Your Comment <span class="required">*</span></label>
+          <textarea class="form-control" name="comment" rows="5" placeholder="Share your planted tank experience or ask a question…" required minlength="20" maxlength="800"></textarea>
+          <div class="form-error"><i class="fa-solid fa-triangle-exclamation"></i> Please write at least 20 characters</div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Post Comment →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+            <div>
+              <span class="footer-brand-name">AquaVista</span>
+              <span class="footer-tagline">Premium Aquatics Since 2010</span>
+            </div>
+          </div>
+          <p>Your gateway to an extraordinary underwater world. Premium fish, rare species, aquatic plants, and expert care — all under one roof.</p>
+          <div class="footer-social" role="list" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="Instagram" role="listitem"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook" role="listitem"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube" role="listitem">▶</a>
+            <a href="#" class="social-link" aria-label="TikTok" role="listitem"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-link" aria-label="Pinterest" role="listitem"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+          <div class="footer-newsletter mt-6">
+            <p>Subscribe for new arrivals &amp; exclusive offers:</p>
+            <form class="newsletter-form" aria-label="Newsletter subscription">
+              <input type="email" placeholder="Your email address" aria-label="Email for newsletter" required>
+              <button type="submit" aria-label="Subscribe">→</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Species</h4>
+          <ul>
+            <li><a href="#">Freshwater Fish</a></li>
+            <li><a href="#">Marine Fish</a></li>
+            <li><a href="#">Cichlids &amp; Exotics</a></li>
+            <li><a href="#">Planted Tank Fish</a></li>
+            <li><a href="#">Shrimp &amp; Invertebrates</a></li>
+            <li><a href="#">Live Coral</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Supplies</h4>
+          <ul>
+            <li><a href="#">Aquarium Tanks</a></li>
+            <li><a href="#">Filters &amp; Pumps</a></li>
+            <li><a href="#">Aquarium Lighting</a></li>
+            <li><a href="#">Fish Food</a></li>
+            <li><a href="#">Decorations</a></li>
+            <li><a href="#">Water Treatments</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">home2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-bottom-left">© 2026 AquaVista Aquatics. All rights reserved. Crafted with <i class="fa-solid fa-fish-fins"></i> by the deep sea.</p>
+        <div class="footer-bottom-right">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/blog-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    document.getElementById('theme-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('theme-toggle')?.click();
+    });
+    document.getElementById('rtl-toggle-mob')?.addEventListener('click', () => {
+      document.getElementById('rtl-toggle')?.click();
+    });
+  </script>
+  <script>
+    // ============================================================
+    //  AquaVista — Dynamic Blog-Details Renderer
+    //  Reads ?id= from URL, sessionStorage, or localStorage
+    // ============================================================
+    (function runRenderer() {
+      /* If blog-data.js hasn't loaded yet, retry once after DOM is ready */
+      if (!window.BLOG_POSTS) {
+        document.addEventListener('DOMContentLoaded', runRenderer);
+        return;
+      }
+
+      function getBlogId() {
+        try {
+          // 1. URL search params
+          var params = new URLSearchParams(window.location.search);
+          var idFromSearch = params.get('id');
+          if (idFromSearch && window.BLOG_POSTS[idFromSearch]) return idFromSearch;
+
+          // 2. Full URL regex (handles hash routing, file:// weirdness)
+          var hrefMatch = window.location.href.match(/[?&]id=([^&#]+)/);
+          if (hrefMatch && hrefMatch[1]) {
+            var decoded = decodeURIComponent(hrefMatch[1]);
+            if (window.BLOG_POSTS[decoded]) return decoded;
+          }
+
+          // 3. Storage fallbacks (sessionStorage / localStorage)
+          var sessionVal = sessionStorage.getItem('aquavista_selected_blog');
+          if (sessionVal && window.BLOG_POSTS[sessionVal]) return sessionVal;
+
+          var localVal = localStorage.getItem('aquavista_selected_blog');
+          if (localVal && window.BLOG_POSTS[localVal]) return localVal;
+        } catch (e) {}
+
+        return 'planted-aquarium';
+      }
+
+      var id = getBlogId();
+      var post = window.BLOG_POSTS[id] || window.BLOG_POSTS['planted-aquarium'];
+      var author = (window.BLOG_AUTHORS && window.BLOG_AUTHORS[post.author]) || { role: '', img: '', bio: '' };
+
+      // Keep storage in sync with current post
+      try {
+        sessionStorage.setItem('aquavista_selected_blog', id);
+        localStorage.setItem('aquavista_selected_blog', id);
+      } catch (e) {}
+
+      /* ---- <title> & breadcrumb ---- */
+      document.title = post.title + ' \u2014 AquaVista Blog';
+
+      /* ---- hero image ---- */
+      var heroImg = document.getElementById('article-hero-img');
+      if (heroImg) {
+        heroImg.src = post.hero;
+        heroImg.alt = post.heroAlt || post.title;
+      }
+
+      /* ---- breadcrumb text ---- */
+      var crumb = document.getElementById('article-crumb');
+      if (crumb) crumb.textContent = post.title;
+
+      /* ---- category badges ---- */
+      var tags = document.getElementById('article-tags');
+      if (tags) {
+        tags.innerHTML = '';
+        (post.category || []).forEach(function (c) {
+          var s = document.createElement('span');
+          if (c.v === 'coral') {
+            s.className = 'badge';
+            s.style.background = 'rgba(229,139,123,0.2)';
+            s.style.color = 'var(--coral)';
+          } else {
+            s.className = 'badge badge-aqua';
+          }
+          s.textContent = c.t;
+          tags.appendChild(s);
+        });
+      }
+
+      /* ---- title ---- */
+      var title = document.getElementById('article-title');
+      if (title) title.textContent = post.title;
+
+      /* ---- author block ---- */
+      var ai = document.getElementById('article-author-img');
+      if (ai) { ai.src = author.img; ai.alt = post.author; }
+      var an = document.getElementById('article-author-name');
+      if (an) an.textContent = post.author;
+      var ar = document.getElementById('article-author-role');
+      if (ar) ar.textContent = author.role || '';
+
+      /* ---- meta: date / read time / views ---- */
+      var d = document.getElementById('article-date');
+      if (d) d.innerHTML = '<i class="fa-solid fa-calendar"></i> ' + post.date;
+      var r = document.getElementById('article-read');
+      if (r) r.textContent = '\u23f1 ' + post.readTime;
+      var v = document.getElementById('article-views');
+      if (v) v.innerHTML = '<i class="fa-solid fa-eye"></i> ' + post.views;
+
+      /* ---- share bar ---- */
+      var shareBar =
+        '<div class="share-bar" role="group" aria-label="Share article">' +
+        '<span style="font-size:var(--fs-sm);font-weight:700;color:var(--text-secondary);">Share:</span>' +
+        '<button class="share-btn" style="background:rgba(29,161,242,0.1);color:#1DA1F2;" onclick="window.AquaVista&&window.AquaVista.showToast(\'Shared on Twitter!\',\'success\')"><i class="fa-solid fa-feather"></i> Twitter</button>' +
+        '<button class="share-btn" style="background:rgba(59,89,152,0.1);color:#3B5998;" onclick="window.AquaVista&&window.AquaVista.showToast(\'Shared on Facebook!\',\'success\')"><i class="fa-solid fa-book"></i> Facebook</button>' +
+        '<button class="share-btn" style="background:rgba(0,119,181,0.1);color:#0077B5;" onclick="window.AquaVista&&window.AquaVista.showToast(\'Copied link to clipboard!\',\'info\')"><i class="fa-solid fa-link"></i> Copy Link</button>' +
+        '</div>';
+
+      /* ---- author bio ---- */
+      var bio =
+        '<div class="author-bio-card"><img class="author-bio-img" src="' + author.img + '" alt="' + post.author + '">' +
+        '<div><div class="author-bio-name">' + post.author + '</div><div class="author-bio-role">' + (author.role || '') + '</div>' +
+        '<p class="author-bio-text">' + (author.bio || '') + '</p></div></div>';
+
+      /* ---- main article body ---- */
+      var main = document.getElementById('article-content');
+      if (main) {
+        var lead = '<p style="font-size:var(--fs-lg);color:var(--text-primary);font-weight:500;line-height:1.8;border-left:4px solid var(--aquamarine);padding-left:var(--sp-5);margin-bottom:var(--sp-8);">' + post.lead + '</p>';
+        main.innerHTML = lead + post.body + shareBar + bio;
+      }
+
+      /* ---- sidebar TOC ---- */
+      var tocWrapper = document.querySelector('#article-toc .toc-links-wrapper') || document.getElementById('article-toc');
+      if (tocWrapper && main) {
+        tocWrapper.querySelectorAll('.toc-link').forEach(function (l) { l.remove(); });
+        var headings = main.querySelectorAll('h2');
+        headings.forEach(function (h) {
+          if (!h.id) {
+            h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          }
+          var a = document.createElement('a');
+          a.href = '#' + h.id;
+          a.className = 'toc-link';
+          a.innerHTML = '<i class="fa-solid fa-chevron-right" style="font-size:0.65rem;color:var(--aquamarine);"></i> ' + h.textContent;
+          tocWrapper.appendChild(a);
+        });
+
+        // ScrollSpy for TOC links
+        if ('IntersectionObserver' in window && headings.length > 0) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var activeId = entry.target.id;
+                tocWrapper.querySelectorAll('.toc-link').forEach(function (link) {
+                  var isMatch = link.getAttribute('href') === '#' + activeId;
+                  link.classList.toggle('active', isMatch);
+                  if (isMatch) {
+                    link.style.color = 'var(--aquamarine)';
+                    link.style.background = 'rgba(56,198,178,0.08)';
+                    link.style.borderLeftColor = 'var(--aquamarine)';
+                    link.style.paddingLeft = '1rem';
+                  } else {
+                    link.style.color = '';
+                    link.style.background = '';
+                    link.style.borderLeftColor = 'transparent';
+                    link.style.paddingLeft = '';
+                  }
+                });
+              }
+            });
+          }, { rootMargin: '-100px 0px -60% 0px' });
+
+          headings.forEach(function (h) { observer.observe(h); });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
