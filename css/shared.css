@@ -48,7 +48,7 @@
 }
 .hour-row:last-child { border-bottom: none; }
 .hour-day { font-weight: 600; }
-.hour-time { color: var(--aquamarine); }
+.hour-time { color: var(--aquamarine-text); }
 
 /* ========== BRAND STORY & ULTRA-PREMIUM REDESIGN ========== */
 .story-section {
@@ -164,7 +164,7 @@
   font-size: var(--fs-xs);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--aquamarine-light);
+  color: var(--aquamarine-text);
 }
 
 .story-badge-sub {
@@ -214,7 +214,7 @@
 }
 
 .verify-badge {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-size: 0.75rem;
   margin-left: 2px;
 }
@@ -272,7 +272,7 @@
   border-radius: var(--radius-full);
   font-size: 0.65rem;
   font-weight: 700;
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   border: 1px solid rgba(56, 198, 178, 0.3);
 }
 
@@ -373,7 +373,7 @@
   height: 36px;
   border-radius: var(--radius-md);
   background: rgba(56, 198, 178, 0.12);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,7 +451,7 @@
 
 .stat-card-icon {
   font-size: 1rem;
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   margin-bottom: 2px;
   opacity: 0.9;
 }
@@ -459,7 +459,7 @@
 .brand-stats-grid .brand-stat-num {
   font-family: var(--font-serif);
   font-size: var(--fs-2xl);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   display: block;
   line-height: 1.1;
   font-weight: 700;
@@ -480,8 +480,13 @@
   display: flex;
   align-items: center;
   gap: var(--sp-4);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: var(--sp-2);
+}
+.story-actions .btn {
+  flex: 1 1 0;
+  padding: var(--sp-4) var(--sp-6);
+  font-size: var(--fs-sm);
 }
 
 /* Backward compatibility */
@@ -502,7 +507,7 @@
 .brand-stat-num {
   font-family: var(--font-serif);
   font-size: var(--fs-3xl);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   display: block;
   line-height: 1.1;
 }
@@ -576,19 +581,36 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: stretch;
+  gap: var(--sp-2);
   padding: var(--sp-6);
+  text-align: left;
 }
+[dir="rtl"] .marine-card-info { text-align: right; }
 .marine-card-info h3 {
   color: var(--pearl);
   font-size: var(--fs-xl);
-  margin-bottom: var(--sp-2);
+  line-height: 1.2;
+  margin: 0;
 }
 .marine-card-info p {
   color: rgba(242,247,245,0.75);
   font-size: var(--fs-sm);
-  margin-bottom: var(--sp-4);
+  margin: 0;
   line-height: 1.6;
+  min-height: 3.2em;
 }
+.marine-card-price {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  color: var(--aquamarine-text);
+  line-height: 1;
+}
+.marine-card-info .flex-between {
+  width: 100%;
+  gap: var(--sp-3);
+}
+.marine-card-info .flex-between .btn { flex-shrink: 0; }
 
 /* ========== PLANT GALLERY ========== */
 .plant-gallery {
@@ -737,7 +759,7 @@
 }
 .social-contact-handle {
   font-size: var(--fs-xs);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
 }
 
 /* ========== SITEMAP & POLICY LAYOUTS ========== */
@@ -793,7 +815,7 @@
 }
 .policy-nav a:hover,
 .terms-nav a:hover {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   padding-left: var(--sp-2);
 }
 .policy-nav a:last-child,
@@ -855,10 +877,28 @@
 
 /* ========== INDEX: ARRIVALS / BENTO / CATEGORIES ========== */
 .arrivals-strip { padding-block: var(--sp-20); background: var(--bg-secondary); }
-.arrival-item { flex-shrink: 0; scroll-snap-align: start; width: calc((100% - var(--sp-5)) / 1.25); }
-@media (min-width: 640px) { .arrival-item { width: calc((100% - var(--sp-5)) / 2); } }
-@media (min-width: 900px)  { .arrival-item { width: calc((100% - 2 * var(--sp-5)) / 3); } }
-@media (min-width: 1200px) { .arrival-item { width: calc((100% - 3 * var(--sp-5)) / 4); } }
+
+/* Just Arrived — responsive grid with equal-height cards */
+.arrivals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5);
+}
+@media (max-width: 900px) { .arrivals-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .arrivals-grid { grid-template-columns: 1fr; } }
+
+.arrivals-grid .product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.arrivals-grid .product-card-img { flex-shrink: 0; }
+.arrivals-grid .product-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.arrivals-grid .product-footer { margin-top: auto; }
 
 .bento-grid {
   display: grid;
@@ -916,9 +956,23 @@
   box-shadow: var(--shadow-md), var(--shadow-glow);
   background: var(--bg-card-hover);
 }
-.cat-emoji { font-size: 2.5rem; }
+.cat-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--abyss);
+}
+.cat-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-spring);
+}
+.cat-item:hover .cat-thumb img { transform: scale(1.08); }
 .cat-label { font-size: var(--fs-xs); font-weight: 700; color: var(--text-primary); text-align: center; }
-.cat-count { font-size: var(--fs-xs); color: var(--aquamarine); font-weight: 600; }
+.cat-count { font-size: var(--fs-xs); color: var(--aquamarine-text); font-weight: 600; }
 
 /* ========== INDEX: TESTIMONIALS / STORE ========== */
 .t-section { background: linear-gradient(160deg, var(--abyss) 0%, var(--deep-ocean) 100%); }
@@ -990,7 +1044,7 @@
 
 .cta-section .section-tag {
   background: rgba(56, 198, 178, 0.15);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   border: 1px solid rgba(56, 198, 178, 0.35);
   box-shadow: 0 4px 15px rgba(56, 198, 178, 0.18);
   margin-bottom: 0;
@@ -1037,7 +1091,7 @@
 }
 
 .cta-feature-pill i {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
 }
 
 .cta-actions {
@@ -1077,7 +1131,7 @@
   border-top: 1px solid rgba(242,247,245,0.15);
 }
 .hero-stat .value {
-  font-family: var(--font-serif); font-size: var(--fs-3xl); color: var(--aquamarine);
+  font-family: var(--font-serif); font-size: var(--fs-3xl); color: var(--aquamarine-text);
   display: block; line-height: 1; margin-bottom: var(--sp-1);
 }
 .hero-stat .label {
@@ -1113,7 +1167,7 @@
 }
 .newsletter-big-form button {
   flex-shrink: 0; width: auto; height: auto; padding: var(--sp-4) var(--sp-8);
-  background: linear-gradient(135deg, var(--abyss), var(--midnight)); color: var(--aquamarine);
+  background: linear-gradient(135deg, var(--abyss), var(--midnight)); color: var(--aquamarine-text);
   border: none; border-radius: var(--radius-full); font-family: var(--font-sans); font-weight: 700;
   font-size: var(--fs-sm); cursor: pointer; transition: all var(--transition-spring); white-space: nowrap;
   display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-2);
@@ -1173,7 +1227,8 @@
 /* Hero Section */
 .article-hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1248,18 +1303,18 @@
 }
 
 .article-breadcrumb a:hover {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   opacity: 1;
 }
 
 .article-breadcrumb .breadcrumb-sep {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-size: 0.65rem;
   opacity: 0.7;
 }
 
 .article-breadcrumb .breadcrumb-current {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-weight: 600;
   max-width: 320px;
   overflow: hidden;
@@ -1326,7 +1381,7 @@
 }
 
 .article-author-role {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -1358,7 +1413,7 @@
 }
 
 .article-meta-item i {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-size: 0.85rem;
 }
 
@@ -1466,7 +1521,7 @@
 
 .tank-spec-icon {
   font-size: 1.4rem;
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   margin-bottom: 2px;
 }
 
@@ -1522,7 +1577,7 @@
 }
 
 .compatibility-card.compatible .compatibility-header {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
 }
 
 .compatibility-card.incompatible .compatibility-header {
@@ -1684,7 +1739,7 @@
 }
 
 .author-bio-role {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-size: var(--fs-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -1735,7 +1790,7 @@
   height: 32px;
   border-radius: var(--radius-md);
   background: rgba(56, 198, 178, 0.12);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1774,7 +1829,7 @@
 }
 
 .toc-link:hover {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   background: rgba(56, 198, 178, 0.08);
   border-left-color: var(--aquamarine);
   padding-left: 1rem;
@@ -1828,7 +1883,7 @@
 }
 
 .sidebar-product-price {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   font-size: var(--fs-xs);
   font-weight: 800;
 }
@@ -1913,18 +1968,18 @@
   color: var(--text-secondary); text-decoration: none; padding: var(--sp-2) var(--sp-3);
   border-radius: var(--radius-md); transition: all var(--transition-fast);
 }
-.sitemap-link::before { content: '→'; color: var(--aquamarine); opacity: 0; transition: all var(--transition-fast); transform: translateX(-4px); }
-.sitemap-link:hover { color: var(--aquamarine); background: rgba(56,198,178,0.06); padding-left: var(--sp-4); }
+.sitemap-link::before { content: '→'; color: var(--aquamarine-text); opacity: 0; transition: all var(--transition-fast); transform: translateX(-4px); }
+.sitemap-link:hover { color: var(--aquamarine-text); background: rgba(56,198,178,0.06); padding-left: var(--sp-4); }
 .sitemap-link:hover::before { opacity: 1; transform: translateX(0); }
 .sitemap-link-label { flex: 1; }
-.sitemap-link-new { font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(56,198,178,0.15); color: var(--aquamarine); padding: 2px 6px; border-radius: var(--radius-full); }
+.sitemap-link-new { font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(56,198,178,0.15); color: var(--aquamarine-text); padding: 2px 6px; border-radius: var(--radius-full); }
 .xml-preview { background: var(--abyss); border-radius: var(--radius-xl); padding: var(--sp-8); font-family: 'Courier New', monospace; font-size: var(--fs-xs); line-height: 1.8; overflow-x: auto; }
 .xml-tag { color: #38C6B2; }
 .xml-val { color: #E58B7B; }
 .xml-comment { color: rgba(242,247,245,0.4); }
 .search-page-emoji { font-size: 2rem; }
 .search-page-name { font-size: var(--fs-sm); font-weight: 700; color: var(--text-primary); }
-.search-page-url { font-size: var(--fs-xs); color: var(--aquamarine); font-family: monospace; }
+.search-page-url { font-size: var(--fs-xs); color: var(--aquamarine-text); font-family: monospace; }
 
 /* ========== PRIVACY / TERMS: EXTRAS ========== */
 .policy-section-box {
@@ -1990,7 +2045,8 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 0;
-  min-height: 62vh;
+  min-height: 100vh;
+  min-height: 100svh;
   padding-bottom: var(--sp-20);
   overflow: visible;
 }
@@ -2051,44 +2107,13 @@
 
 /* Font Awesome icon alignment */
 i.fa-solid, i.fa-brands { vertical-align: middle; line-height: 1; }
-.footer-logo-icon i { font-size: 1.8rem; color: var(--aquamarine); }
+.footer-logo-icon i { font-size: 1.8rem; color: var(--aquamarine-text); }
 .social-link i { font-size: 1.05rem; }
 .nav-link i, .mobile-nav-link i { font-size: .95em; }
 .nav-btn i { font-size: 1.05rem; }
 .btn i { font-size: .95em; }
 
-/* Just Arrived — header prev/next nav */
-.arrivals-header {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  max-width: none;
-  margin-inline: 0;
-  gap: var(--sp-6);
-  flex-wrap: wrap;
-}
-.arrivals-heading { display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-2); flex: 1 1 280px; }
-.arrivals-nav { display: flex; gap: var(--sp-3); flex-shrink: 0; }
-.arrival-arrow {
-  width: 46px; height: 46px;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  display: inline-flex; align-items: center; justify-content: center;
-  font-size: 1.05rem;
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-.arrival-arrow:hover {
-  background: var(--aquamarine);
-  color: #fff;
-  border-color: var(--aquamarine);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-.arrival-arrow:active { transform: scale(0.95); }
+/* Just Arrived — all cards share equal height via .arrivals-grid */
 
 /* Hide product card hover action icons (wishlist + quick view) */
 .product-card-actions { display: none !important; }
@@ -2109,3 +2134,46 @@ i.fa-solid, i.fa-brands { vertical-align: middle; line-height: 1; }
   border-bottom: 1px solid var(--border-color);
 }
 .error-nav a { color: var(--text-primary); text-decoration: none; font-weight: 600; }
+
+/* ============================================================
+   AQUAMARINE TEXT — FIXED-DARK RESTORATION
+   --aquamarine-text is a dark teal in Light Mode (AA contrast).
+   These sections are permanently dark, so keep bright aquamarine.
+   ============================================================ */
+.hero-eyebrow,
+.hero-title span,
+.hero-content .breadcrumb a,
+.hero-stat .value,
+.hero .btn-outline,
+.hero-slider .slider-arrow:hover,
+.breadcrumb a,
+.breadcrumb a:hover,
+.breadcrumb-current,
+.page-hero-title span,
+.page-hero .btn-outline,
+.article-hero .article-breadcrumb a,
+.article-breadcrumb .breadcrumb-sep,
+.article-breadcrumb .breadcrumb-current,
+.article-hero .btn-outline,
+.testimonial-quote,
+.t-section .section-tag,
+.cta-section .section-tag,
+.cta-section .btn-outline,
+.cta-feature-pill i,
+.newsletter-big-form button,
+.marine-card-price,
+.floating-card-chip,
+.footer-tagline,
+.footer-logo-icon i,
+.social-link,
+.footer-col ul li a:hover,
+.footer-col ul li a::before,
+.footer-bottom-right a:hover {
+  color: var(--aquamarine) !important;
+}
+
+.hero-content .breadcrumb a:hover,
+.article-hero .article-breadcrumb a:hover,
+.story-badge-title {
+  color: var(--aquamarine-light) !important;
+}

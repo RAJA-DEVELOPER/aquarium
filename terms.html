@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AquaVista Terms & Conditions — Our terms of service, purchase policies, live animal guarantee and shipping conditions.">
   <title>Terms & Conditions — AquaVista Premium Aquatics</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
@@ -20,32 +20,43 @@
 
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><i class="fa-solid fa-fish-fins"></i></div><div class="nav-logo-text"><span class="nav-brand">AquaVista</span><span class="nav-tagline">Premium Aquatics</span></div></a>
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 16C9.5 9.2 15.5 7.2 21 8.8L28 11.2L23.2 16L28 20.8L21 23.2C15.5 24.8 9.5 22.8 6 16Z" fill="#38C6B2"/><path d="M15.2 9.8C17.4 11 18.6 13.2 19 16C18.6 18.8 17.4 21 15.2 22.2L14.2 18.4C14.9 17.4 15.2 16.4 15.25 16C15.2 15.6 14.9 14.6 14.2 13.6L15.2 9.8Z" fill="white" opacity="0.92"/><circle cx="11.2" cy="14.6" r="1.8" fill="#071E2B"/><circle cx="10.7" cy="14.15" r="0.6" fill="white"/></svg></div><div class="nav-logo-text"><span class="nav-brand">AquaVista</span><span class="nav-tagline">Premium Aquatics</span></div></a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li><li class="nav-item"><a href="home2.html" class="nav-link">home2</a></li><li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
       <li><a href="blog.html" class="nav-link">Blog</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-controls">
-      <button class="nav-btn" id="theme-toggle"><span class="theme-icon"><i class="fa-solid fa-moon"></i></span></button>
-      <button class="nav-btn" id="rtl-toggle"><span class="rtl-icon">RTL</span></button>
+      <button class="nav-btn" id="theme-toggle" aria-label="Toggle dark mode"><span class="theme-icon"><i class="fa-solid fa-moon"></i></span></button>
+      <button class="nav-btn" id="rtl-toggle" aria-label="Toggle RTL"><span class="rtl-icon">RTL</span></button>
+      <a href="#" class="nav-login" aria-label="Log in"><i class="fa-regular fa-user"></i> Login</a>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
     </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<div class="mobile-menu"><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a><a href="home2.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> home2</a><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a><a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a><a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a></div>
+<div class="mobile-menu"><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a><a href="home2.html" class="mobile-nav-link"><i class="fa-solid fa-compass"></i> home2</a><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a><a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a><a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a><a href="contact.html" class="btn btn-primary mobile-cta"><i class="fa-solid fa-calendar-check"></i> Book Now</a>    <a href="#" class="nav-login-mobile" aria-label="Log in"><i class="fa-regular fa-user"></i> Log in to your account</a>
+  <div class="mobile-menu-controls">
+</div>
 
-<!-- SECTION 1: HERO -->
-<section style="padding-top:calc(var(--nav-height) + var(--sp-16));padding-bottom:var(--sp-16);background:linear-gradient(160deg,var(--abyss) 0%,var(--midnight) 100%);position:relative;overflow:hidden;" aria-label="Terms header">
-  <div class="bubbles-container" data-bubbles="6" aria-hidden="true"></div>
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="breadcrumb" style="margin-bottom:var(--sp-6);"><a href="index.html" style="color:rgba(242,247,245,0.6);">Home</a><span class="breadcrumb-sep" style="color:rgba(242,247,245,0.4);">/</span><span class="breadcrumb-current">Terms & Conditions</span></div>
+<!-- ========== SECTION 1: TERMS HERO ========== -->
+<header class="page-hero" aria-label="Terms & Conditions header">
+  <div class="bubbles-container" data-bubbles="16" aria-hidden="true"></div>
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1514855170001-ee95e4302737?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="AquaVista aquatic showroom" loading="eager">
+  </div>
+  <div class="container page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Terms &amp; Conditions</span>
+    </nav>
     <span class="section-tag" style="background:rgba(229,139,123,0.15);border-color:rgba(229,139,123,0.3);color:var(--coral);">Legal</span>
-    <h1 style="font-family:var(--font-serif);font-size:var(--fs-4xl);color:var(--pearl);margin-top:var(--sp-4);margin-bottom:var(--sp-5);">Terms &amp; Conditions</h1>
-    <p style="color:rgba(242,247,245,0.7);font-size:var(--fs-lg);max-width:600px;line-height:1.8;">Please read these terms carefully before using our website or making a purchase. By using AquaVista services, you agree to be bound by these terms.</p>
+    <h1 class="page-hero-title">Terms <span>&amp; Conditions</span></h1>
+    <p class="page-hero-desc">Please read these terms carefully before using our website or making a purchase. By using AquaVista services, you agree to be bound by these terms.</p>
     <div style="display:inline-flex;align-items:center;gap:var(--sp-2);font-size:var(--fs-sm);color:rgba(242,247,245,0.55);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-full);padding:var(--sp-2) var(--sp-4);margin-top:var(--sp-6);"><i class="fa-solid fa-calendar"></i> Last Updated: August 1, 2026</div>
   </div>
-</section>
+</header>
 
 <!-- SECTIONS 2–5: TERMS CONTENT -->
 <section class="section" aria-label="Terms content">
@@ -73,7 +84,7 @@
         <p>We guarantee all livestock to arrive alive and in healthy condition. In the unlikely event that an animal arrives dead, you must:</p>
         <ol>
           <li>Photograph the deceased animal clearly (unopened bag if shipped) within 2 hours of delivery confirmation</li>
-          <li>Email the photograph to <a href="mailto:orders@aquavista.com" style="color:var(--aquamarine);">orders@aquavista.com</a> with your order number</li>
+          <li>Email the photograph to <a href="mailto:orders@aquavista.com" style="color:var(--aquamarine-text);">orders@aquavista.com</a> with your order number</li>
           <li>Report within 2 hours — claims submitted after this window may not be accepted</li>
         </ol>
         <div class="highlight-box-blue">
@@ -109,7 +120,7 @@
         <p>These terms are governed by the laws of Singapore. Any disputes shall be subject to the exclusive jurisdiction of the courts of Singapore. For international customers, these terms do not affect your statutory rights under your local consumer protection laws.</p>
 
         <h2 id="contact-terms">8. Contact</h2>
-        <p>For any questions regarding these terms, contact us at: <a href="mailto:legal@aquavista.com" style="color:var(--aquamarine);">legal@aquavista.com</a> or at our registered address: 42 Aquamarine Boulevard, Marina Bay, Singapore 018974.</p>
+        <p>For any questions regarding these terms, contact us at: <a href="mailto:legal@aquavista.com" style="color:var(--aquamarine-text);">legal@aquavista.com</a> or at our registered address: 42 Aquamarine Boulevard, Marina Bay, Singapore 018974.</p>
       </div>
 
       <aside>
@@ -145,13 +156,13 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+        <a href="index.html" class="footer-logo" aria-label="AquaVista Home">
+          <div class="footer-logo-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 16C9.5 9.2 15.5 7.2 21 8.8L28 11.2L23.2 16L28 20.8L21 23.2C15.5 24.8 9.5 22.8 6 16Z" fill="#38C6B2"/><path d="M15.2 9.8C17.4 11 18.6 13.2 19 16C18.6 18.8 17.4 21 15.2 22.2L14.2 18.4C14.9 17.4 15.2 16.4 15.25 16C15.2 15.6 14.9 14.6 14.2 13.6L15.2 9.8Z" fill="white" opacity="0.92"/><circle cx="11.2" cy="14.6" r="1.8" fill="#071E2B"/><circle cx="10.7" cy="14.15" r="0.6" fill="white"/></svg></div>
           <div>
             <span class="footer-brand-name">AquaVista</span>
-            <span class="footer-tagline">Premium Aquatics Since 2010</span>
+            <span class="footer-tagline">Premium Aquatics</span>
           </div>
-        </div>
+        </a>
         <p>Your gateway to an extraordinary underwater world. Premium fish, rare species, aquatic plants, and expert care — all under one roof.</p>
         <div class="footer-social" role="list" aria-label="Social media links">
           <a href="#" class="social-link" aria-label="Instagram" role="listitem"><i class="fa-brands fa-instagram"></i></a>

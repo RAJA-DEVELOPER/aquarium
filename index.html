@@ -8,6 +8,7 @@
   <meta property="og:title" content="AquaVista — Ultra Premium Aquarium Store">
   <meta property="og:description" content="Your gateway to an extraordinary underwater world. Premium fish, plants & supplies.">
   <title>AquaVista — Ultra Premium Aquarium & Aquatic Supplies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
 <div id="search-modal" role="dialog" aria-label="Search" aria-modal="true">
   <div class="search-box">
     <div class="search-header">
-      <span style="color:var(--aquamarine);font-size:1.1rem;"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <span style="color:var(--aquamarine-text);font-size:1.1rem;"><i class="fa-solid fa-magnifying-glass"></i></span>
       <input class="search-input" type="search" placeholder="Search fish, plants, equipment…" autocomplete="off">
       <button class="search-close" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
     </div>
@@ -45,7 +46,7 @@
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="AquaVista Home">
-      <div class="nav-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+      <div class="nav-logo-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 16C9.5 9.2 15.5 7.2 21 8.8L28 11.2L23.2 16L28 20.8L21 23.2C15.5 24.8 9.5 22.8 6 16Z" fill="#38C6B2"/><path d="M15.2 9.8C17.4 11 18.6 13.2 19 16C18.6 18.8 17.4 21 15.2 22.2L14.2 18.4C14.9 17.4 15.2 16.4 15.25 16C15.2 15.6 14.9 14.6 14.2 13.6L15.2 9.8Z" fill="white" opacity="0.92"/><circle cx="11.2" cy="14.6" r="1.8" fill="#071E2B"/><circle cx="10.7" cy="14.15" r="0.6" fill="white"/></svg></div>
       <div class="nav-logo-text">
         <span class="nav-brand">AquaVista</span>
         <span class="nav-tagline">Premium Aquatics</span>
@@ -67,7 +68,8 @@
       <button class="nav-btn" id="rtl-toggle" aria-label="Toggle RTL">
         <span class="rtl-icon">RTL</span>
       </button>
-      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
+      <a href="#" class="nav-login" aria-label="Log in"><i class="fa-regular fa-user"></i> Login</a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Shop Now</a>
     </div>
 
     <button class="nav-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -83,6 +85,8 @@
     <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info"></i> About</a><a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
     <a href="blog.html" class="mobile-nav-link"><i class="fa-solid fa-book-open"></i> Blog</a>
     <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact</a>
+      <a href="contact.html" class="btn btn-primary mobile-cta"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+      <a href="#" class="nav-login-mobile" aria-label="Log in"><i class="fa-regular fa-user"></i> Log in to your account</a>
   <div class="mobile-menu-controls">
     <button class="btn btn-outline btn-sm" id="theme-toggle-mob"><i class="fa-solid fa-moon"></i> Dark Mode</button>
     <button class="btn btn-ghost btn-sm" id="rtl-toggle-mob">RTL</button>
@@ -169,21 +173,15 @@
 <!-- ========== SECTION 2: NEW STOCK ARRIVALS ========== -->
 <section class="arrivals-strip section-sm" aria-labelledby="arrivals-heading">
   <div class="container">
-    <div class="section-header arrivals-header reveal reveal-up">
-      <div class="arrivals-heading">
-        <span class="section-tag">Just Arrived</span>
-        <h2 class="section-title" id="arrivals-heading">New Stock <span class="gradient-text">Arrivals</span></h2>
-        <p class="section-subtitle">Fresh from sustainable breeders and ethical ocean sources — added to our collection this week.</p>
-      </div>
-      <div class="arrivals-nav">
-        <button class="arrival-arrow prev" type="button" aria-label="Scroll arrivals left"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="arrival-arrow next" type="button" aria-label="Scroll arrivals right"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
+    <div class="section-header reveal reveal-up">
+      <span class="section-tag">Just Arrived</span>
+      <h2 class="section-title" id="arrivals-heading">New Stock <span class="gradient-text">Arrivals</span></h2>
+      <p class="section-subtitle">Fresh from sustainable breeders and ethical ocean sources — added to our collection this week.</p>
     </div>
 
-    <div class="h-scroll reveal reveal-up reveal-delay-2" role="list" aria-label="New arrivals">
+    <div class="arrivals-grid reveal reveal-up reveal-delay-2" role="list" aria-label="New arrivals">
       <!-- Card 1 -->
-      <div class="product-card arrival-item" role="listitem" data-category="marine" data-name="Blue Tang" data-price="89" data-rating="4.9" data-id="1">
+      <div class="product-card" role="listitem" data-category="marine" data-name="Blue Tang" data-price="89" data-rating="4.9" data-id="1">
         <div class="product-card-img">
           <img src="https://images.unsplash.com/photo-1747400701453-a79d17fd9578?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc0fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Blue Tang fish" loading="lazy">
           <div class="product-card-badges"><span class="badge badge-new">New</span></div>
@@ -205,7 +203,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="product-card arrival-item" role="listitem" data-category="freshwater" data-name="Cardinal Tetra" data-price="12" data-rating="4.8" data-id="2">
+      <div class="product-card" role="listitem" data-category="freshwater" data-name="Cardinal Tetra" data-price="12" data-rating="4.8" data-id="2">
         <div class="product-card-img">
           <img src="https://images.unsplash.com/photo-1715818466408-b4c093a084c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTcwfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Cardinal Tetra schooling fish" loading="lazy">
           <div class="product-card-badges"><span class="badge badge-new">New</span><span class="badge badge-sale">−20%</span></div>
@@ -227,7 +225,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="product-card arrival-item" role="listitem" data-category="marine" data-name="Mandarin Dragonet" data-price="149" data-rating="5.0" data-id="3">
+      <div class="product-card" role="listitem" data-category="marine" data-name="Mandarin Dragonet" data-price="149" data-rating="5.0" data-id="3">
         <div class="product-card-img">
           <img src="https://plus.unsplash.com/premium_photo-1708433274371-fd628943f4e8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTczfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Mandarin dragonet fish" loading="lazy">
           <div class="product-card-badges"><span class="badge badge-rare">Rare</span></div>
@@ -249,7 +247,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="product-card arrival-item" role="listitem" data-category="planted" data-name="Java Fern" data-price="18" data-rating="4.7" data-id="4">
+      <div class="product-card" role="listitem" data-category="planted" data-name="Java Fern" data-price="18" data-rating="4.7" data-id="4">
         <div class="product-card-img">
           <img src="https://images.unsplash.com/photo-1636045466216-089c502a3905?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc5fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Java fern aquatic plant" loading="lazy">
           <div class="product-card-badges"><span class="badge badge-new">New</span></div>
@@ -270,7 +268,7 @@
       </div>
 
       <!-- Card 5 -->
-      <div class="product-card arrival-item" role="listitem" data-category="freshwater" data-name="Discus" data-price="75" data-rating="4.9" data-id="5">
+      <div class="product-card" role="listitem" data-category="freshwater" data-name="Discus" data-price="75" data-rating="4.9" data-id="5">
         <div class="product-card-img">
           <img src="https://images.unsplash.com/photo-1559717201-2879521b49f4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTgwfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Vibrant discus fish" loading="lazy">
           <div class="product-card-badges"><span class="badge badge-rare">Rare</span></div>
@@ -291,7 +289,7 @@
       </div>
 
       <!-- Card 6 -->
-      <div class="product-card arrival-item" role="listitem" data-category="marine" data-name="Clownfish" data-price="45" data-rating="4.8" data-id="6">
+      <div class="product-card" role="listitem" data-category="marine" data-name="Clownfish" data-price="45" data-rating="4.8" data-id="6">
         <div class="product-card-img">
           <img src="https://plus.unsplash.com/premium_photo-1661963171944-6ba0f041ebd4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk3fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Clownfish in anemone" loading="lazy">
           <div class="product-card-badges"><span class="badge badge-aqua">Popular</span></div>
@@ -372,62 +370,62 @@
 
     <div class="cat-grid" data-stagger=".cat-item" data-delay="80" role="list">
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-fish"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1504472478235-9bc48ba4d60f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Schooling freshwater neon tetras" loading="lazy"></span>
         <span class="cat-label">Freshwater Fish</span>
         <span class="cat-count">180+ Species</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-fish-fins"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1667680139900-44882fc7b625?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Emperor angelfish in a marine reef" loading="lazy"></span>
         <span class="cat-label">Marine Fish</span>
         <span class="cat-count">95+ Species</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-toolbox"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1625637996911-e042311e39db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQzfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Vallisneria aquatic plants" loading="lazy"></span>
         <span class="cat-label">Aquatic Plants</span>
         <span class="cat-count">120+ Varieties</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-toolbox"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1560275619-4cc5fa59d3ae?w=600&q=80&auto=format&fit=crop" alt="Custom aquarium tank setup" loading="lazy"></span>
         <span class="cat-label">Tanks & Tanks</span>
         <span class="cat-count">40+ Models</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-lightbulb"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1533745848184-3db07256e163?w=1200&q=90&auto=format&fit=crop" alt="Brightly lit reef aquarium" loading="lazy"></span>
         <span class="cat-label">Lighting</span>
         <span class="cat-count">60+ Products</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1729544676664-fd2e8492db8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Aquarium equipment maintenance" loading="lazy"></span>
         <span class="cat-label">Filters & Pumps</span>
         <span class="cat-count">55+ Products</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-shrimp"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1592237163215-c97b487faeb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYzfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Schooling cardinal tetras" loading="lazy"></span>
         <span class="cat-label">Fish Food</span>
         <span class="cat-count">80+ Options</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-leaf"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1612476919598-a233d3692cc6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Professional planted aquascape" loading="lazy"></span>
         <span class="cat-label">Planted Tank</span>
         <span class="cat-count">Full Sets</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-fish-fins"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1722590216145-e3c6c4d82b58?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Discus cichlids in a planted tank" loading="lazy"></span>
         <span class="cat-label">Cichlids</span>
         <span class="cat-count">45+ Species</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-shrimp"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1695231054363-f149bb54841e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxhcXVhcml1bXxlbnwwfHwwfHx8MA%3D%3D" alt="Clownfish and anemone invertebrates" loading="lazy"></span>
         <span class="cat-label">Shrimp & Inverts</span>
         <span class="cat-count">30+ Species</span>
       </a>
       <a href="#" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-leaf"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1512391806023-e43a4e65899f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Live corals in a reef aquarium" loading="lazy"></span>
         <span class="cat-label">Live Coral</span>
         <span class="cat-count">75+ Frags</span>
       </a>
       <a href="services.html" class="cat-item reveal-child" role="listitem">
-        <span class="cat-emoji"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="cat-thumb"><img src="https://images.unsplash.com/photo-1514855170001-ee95e4302737?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGFxdWFyaXVtfGVufDB8fDB8fHww" alt="Aquarium showroom with supplies" loading="lazy"></span>
         <span class="cat-label">Accessories</span>
         <span class="cat-count">200+ Items</span>
       </a>
@@ -520,14 +518,14 @@
             <div class="store-info-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="store-info-text">
               <h5>Phone</h5>
-              <p><a href="tel:+6561234567" style="color:var(--aquamarine);">+65 6123 4567</a></p>
+              <p><a href="tel:+6561234567" style="color:var(--aquamarine-text);">+65 6123 4567</a></p>
             </div>
           </div>
           <div class="store-info-item">
             <div class="store-info-icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="store-info-text">
               <h5>Email</h5>
-              <p><a href="mailto:hello@aquavista.com" style="color:var(--aquamarine);">hello@aquavista.com</a></p>
+              <p><a href="mailto:hello@aquavista.com" style="color:var(--aquamarine-text);">hello@aquavista.com</a></p>
             </div>
           </div>
           <div>
@@ -577,13 +575,13 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-icon" aria-hidden="true"><i class="fa-solid fa-fish-fins"></i></div>
+        <a href="index.html" class="footer-logo" aria-label="AquaVista Home">
+          <div class="footer-logo-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 16C9.5 9.2 15.5 7.2 21 8.8L28 11.2L23.2 16L28 20.8L21 23.2C15.5 24.8 9.5 22.8 6 16Z" fill="#38C6B2"/><path d="M15.2 9.8C17.4 11 18.6 13.2 19 16C18.6 18.8 17.4 21 15.2 22.2L14.2 18.4C14.9 17.4 15.2 16.4 15.25 16C15.2 15.6 14.9 14.6 14.2 13.6L15.2 9.8Z" fill="white" opacity="0.92"/><circle cx="11.2" cy="14.6" r="1.8" fill="#071E2B"/><circle cx="10.7" cy="14.15" r="0.6" fill="white"/></svg></div>
           <div>
             <span class="footer-brand-name">AquaVista</span>
-            <span class="footer-tagline">Premium Aquatics Since 2010</span>
+            <span class="footer-tagline">Premium Aquatics</span>
           </div>
-        </div>
+        </a>
         <p>Your gateway to an extraordinary underwater world. Premium fish, rare species, aquatic plants, and expert care — all under one roof.</p>
         <div class="footer-social" role="list" aria-label="Social media links">
           <a href="#" class="social-link" aria-label="Instagram" role="listitem"><i class="fa-brands fa-instagram"></i></a>

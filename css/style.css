@@ -14,6 +14,7 @@
   --aquamarine: #38C6B2;
   --aquamarine-light: #5AD4C2;
   --aquamarine-dark: #2AA898;
+  --aquamarine-text: #0B7B6C;
   --coral: #E58B7B;
   --coral-light: #EDA99C;
   --coral-dark: #D4705E;
@@ -139,6 +140,7 @@
   --glass-bg-strong: rgba(11,83,105,0.4);
   --glass-border: rgba(56,198,178,0.2);
   --overlay-dark: rgba(7,30,43,0.75);
+  --aquamarine-text: var(--aquamarine);
 }
 
 /* ---- RTL Support ---- */
@@ -176,7 +178,7 @@ body {
 /* ---- Typography ---- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--text-primary);
   letter-spacing: -0.01em;
@@ -189,14 +191,14 @@ h4 { font-size: var(--fs-xl); }
 h5 { font-size: var(--fs-lg); }
 h6 { font-size: var(--fs-md); }
 
-p { color: var(--text-secondary); line-height: 1.8; }
+p { color: var(--text-secondary); line-height: 1.8; font-weight: 400; }
 
 a {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
-a:hover { color: var(--aquamarine-light); }
+a:hover { color: var(--aquamarine-dark); }
 
 img {
   max-width: 100%;
@@ -276,7 +278,7 @@ input, textarea, select {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   padding: var(--sp-2) var(--sp-4);
   background: rgba(56,198,178,0.1);
   border: 1px solid rgba(56,198,178,0.25);
@@ -420,7 +422,7 @@ input, textarea, select {
 .btn-outline {
   background: transparent;
   border-color: var(--aquamarine);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
 }
 .btn-outline:hover {
   background: var(--aquamarine);
@@ -478,7 +480,7 @@ input, textarea, select {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.badge-aqua { background: rgba(56,198,178,0.15); color: var(--aquamarine); }
+.badge-aqua { background: rgba(56,198,178,0.15); color: var(--aquamarine-text); }
 .badge-coral { background: rgba(229,139,123,0.15); color: var(--coral-dark); }
 .badge-new { background: linear-gradient(135deg, var(--aquamarine), var(--aquamarine-dark)); color: var(--abyss); }
 .badge-sale { background: linear-gradient(135deg, var(--coral), var(--coral-dark)); color: white; }
@@ -505,11 +507,11 @@ input, textarea, select {
   flex-wrap: wrap;
 }
 .breadcrumb a {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   transition: color var(--transition-fast);
 }
 .breadcrumb a:hover {
-  color: var(--aquamarine-light);
+  color: var(--aquamarine-text);
   text-decoration: underline;
 }
 .breadcrumb-sep {
@@ -523,7 +525,7 @@ input, textarea, select {
   color: rgba(242,247,245,0.7);
 }
 .hero-content .breadcrumb a:hover {
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
 }
 .hero-content .breadcrumb-sep {
   color: rgba(242,247,245,0.4);
@@ -544,7 +546,7 @@ input, textarea, select {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
-.text-aqua { color: var(--aquamarine); }
+.text-aqua { color: var(--aquamarine-text); }
 .text-coral { color: var(--coral); }
 .text-muted { color: var(--text-muted); }
 .text-inverse { color: var(--pearl); }
@@ -786,6 +788,7 @@ input, textarea, select {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -832,7 +835,7 @@ input, textarea, select {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   display: flex;
   align-items: center;
   gap: var(--sp-3);
@@ -851,10 +854,10 @@ input, textarea, select {
   color: var(--pearl);
   line-height: 1.05;
   margin-bottom: var(--sp-6);
-  font-weight: 400;
+  font-weight: 600;
 }
 
-.hero-title span { color: var(--aquamarine); }
+.hero-title span { color: var(--aquamarine-text); }
 
 .hero-description {
   font-size: var(--fs-lg);
@@ -862,6 +865,7 @@ input, textarea, select {
   line-height: 1.8;
   margin-bottom: var(--sp-10);
   max-width: 540px;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -933,7 +937,7 @@ input, textarea, select {
 .stat-number {
   font-family: var(--font-serif);
   font-size: var(--fs-4xl);
-  color: var(--aquamarine);
+  color: var(--aquamarine-text);
   display: block;
   line-height: 1;
 }
@@ -964,6 +968,38 @@ input, textarea, select {
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ---- Typographic Hierarchy Enforcement ---- */
+/* Headings use 600 for clear hierarchy; paragraphs remain 400–550 */
+h1, h2, h3, h4, h5, h6,
+.hero-title, .page-hero-title, .article-hero-title, .cta-title,
+.section-title, .bento-card-info h3, .marine-card-info h3, .plant-item-label,
+.community-card-overlay h3, .value-title, .guide-title, .team-name,
+.service-card-title, .feature-text h4, .timeline-title, .step-card h3, .step-title,
+.pricing-amount, .brand-stat-num, .brand-stat-card .brand-stat-num,
+.stat-value, .stat-number, .sitemap-section-title, .cta-section .cta-title,
+.blog-title, .product-name, .related-card-info h4, .author-bio-name,
+.terms-body h2, .terms-body h3, .policy-body h2,
+.error-title, .maintenance-title {
+  font-weight: 600 !important;
+}
+
+p, .hero-description, .page-hero-desc, .section-subtitle,
+.product-scientific, .product-desc, .blog-excerpt, .guide-desc, .value-desc,
+.feature-text p, .service-card-desc, .timeline-text, .pricing-features, .pricing-feature,
+.footer-brand p, .article-body p, .article-body li,
+.terms-body p, .terms-body li, .policy-body p, .policy-body li,
+.faq-answer-inner, .faq-quick-a, .cta-desc, .story-lead, .pillar-desc,
+.floating-card-text, .author-bio-text, .testimonial-text, .sitemap-link-label,
+.search-page-name, .search-page-url, .hero-subtitle {
+  font-weight: 400 !important;
+}
+
+/* Lead / emphasis paragraphs may use 500–550 within allowed range */
+.story-lead, .article-body blockquote, .article-body .callout,
+.maintenance-desc, .error-desc {
+  font-weight: 500 !important;
 }
 
 /* ---- Print ---- */
